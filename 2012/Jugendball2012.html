@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotogalerie Blau | Jugendverein</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../blue-gallery.css">
+</head>
+<body class="style-blue">
+
+    <header class="blue-header">
+        <div class="header-content">
+            <h1 class="logo-blue">JUGEND<span>HOF</span></h1>
+            <nav class="blue-nav">
+                <a href="../index.html">Home</a>
+                <a href="#" class="active">Archiv</a>
+                <a href="#">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="blue-info-bar">
+            <h2>PROJEKT_BLAU // ARCHIV_DATEN <span id="year-tag">2015</span></h2>
+        </div>
+
+        <div id="gallery-container" class="blue-flex-grid photo-grid"></div>
+    </main>
+
+    <script src="../loadimages.js"></script>
+    <script>
+        window.onload = function() {
+            // Jahr und Festname hier anpassen
+            loadGallery('2016', 'jugendball');
+        };
+    </script>
+</body>
+</html>

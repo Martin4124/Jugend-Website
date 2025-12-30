@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUGEND HOF | 25 JAHRE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;700;900&family=Permanent+Marker&family=Roboto:wght@300;400&family=Verdana&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="style-sunset"> <div class="bg-sunset-glow"></div> <div class="bg-neon-beams"></div>  <div class="bg-chrome-waves"></div> <div id="cockpit">
+        <label>ZEITREISE MODUL</label>
+        <div class="display-wrapper"><span id="year-display">2025</span></div>
+        <input type="range" id="time-slider" min="2001" max="2025" value="2025" step="1" oninput="updateTimeline(this.value)">
+        <div class="range-labels"><span>2001 - </span><span>HEUTE</span></div>
+    </div>
+
+    <div class="container">
+        <header class="main-header">
+            <div class="logo-wrapper">
+                <img src="JuvLogo2008.jpg" alt="Logo" class="logo-image logo-2014">
+                
+                <img src="juvbanner.gif" alt="Jugend Hof 2006" class="logo-image logo-2006">
+                
+                <h1 class="logo-text">JUGEND HOF</h1> 
+                <div class="status-badge">ONLINE</div>
+            </div>
+            
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="#">Chronik</a>
+                <a href="#">Vorstand</a>
+                <a href="#">Zeitleiste</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="info-bar">
+                <h2 id="era-title"></h2>
+            </section>
+
+            <div class="photo-grid" id="gallery-container">
+                </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+/* ============================================================
+   RED GALLERY - TRUE GOOGLE PHOTOS LOOK (No Fixed Boxes)
+   ============================================================ */
+
+:root {
+    --juv-red: #4a0000;
+    --juv-red-hover: #7a0000;
+}
+
+/* 1. Der Container: Muss Flexbox sein */
+.red-flex-grid, .photo-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px;
+    padding: 20px;
+    background-color: #000;
+    justify-content: center;
+}
+
+/* 2. Die Card: Breite DARF NICHT fest sein (320px muss weg!) */
+.red-flex-grid .card, .justified-item {
+    flex: 1 1 auto !important; /* Erlaubt proportionales Wachstum */
+    height: 300px !important;    /* Alle Bilder in einer Zeile sind gleich hoch */
+    width: auto !important;      /* WICHTIG: Hebt die 320px aus style.css auf! */
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    margin: 0 !important;
+}
+
+/* 3. Das Bild: Bestimmt durch sein Format die Breite des Rahmens */
+.red-flex-grid .card img, .justified-item img {
+    height: 100% !important;
+    width: auto !important;      /* Bild behält sein Seitenverhältnis */
+    min-width: 100%;             /* Füllt den Rahmen aber mindestens aus */
+    object-fit: cover;           /* Verhindert Verzerrung */
+    display: block;
+}
+
+/* 4. Letzte Reihe Fix: Verhindert, dass 1-2 Bilder die ganze Zeile sprengen */
+.red-flex-grid::after, .photo-grid::after {
+    content: '';
+    flex-grow: 999 !important;
+}
+
+/* --- OPTIK (2006 Style) --- */
+
+.red-flex-grid .card:hover {
+    border-color: var(--juv-red-hover);
+    z-index: 10;
+}
+
+.card-txt {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(74, 0, 0, 0.9);
+    padding: 8px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.card:hover .card-txt {
+    transform: translateY(0);
+}
+
+.card-txt h3 {
+    color: #fff;
+    font-size: 11px;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+/* 5. Mobile Anpassung */
+@media (max-width: 768px) {
+    .red-flex-grid .card, .justified-item {
+        height: 200px !important; /* Kleinere Reihen auf dem Handy */
+    }
+}

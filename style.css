@@ -1,0 +1,248 @@
+/* =========================================
+   GLOBAL & RESET
+   ========================================= */
+* { box-sizing: border-box; margin: 0; padding: 0; transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1); }
+body { min-height: 100vh; overflow-x: hidden; font-family: sans-serif; }
+img { width: 100%; display: block; }
+
+/* =========================================
+   COCKPIT (Slider)
+   ========================================= */
+#cockpit {
+    position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+    width: 90%; max-width: 500px;
+    background: rgba(0,0,0,0.8); backdrop-filter: blur(10px);
+    padding: 20px; border-radius: 15px; border: 1px solid #555;
+    z-index: 9999; text-align: center; color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+#year-display { font-size: 3rem; font-family: 'Anton', sans-serif; line-height: 1; }
+input[type=range] { -webkit-appearance: none; width: 100%; margin: 15px 0; background: transparent; }
+input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 6px; background: #555; border-radius: 3px; }
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 20px; width: 20px; border-radius: 50%; background: #fff; margin-top: -7px; cursor: pointer; }
+
+/* HINTERGRÜNDE DEFAULT AUS */
+.bg-sunset-glow, .bg-neon-beams, .bg-chrome-waves { display: none; position: fixed; top:0; left:0; width:100%; height:100%; z-index:-1; }
+/* Logo-Bild standardmäßig ausblenden */
+.logo-image { display: none; }
+
+/* ============================================================
+   1. STYLE: SUNSET / FIRE (2021 - 2025)
+   ============================================================ */
+body.style-sunset {
+    background-color: #1a0500; color: #fff; font-family: 'Montserrat', sans-serif;
+    --acc-primary: #ff4800; --acc-sec: #ffae00;
+}
+body.style-sunset .bg-sunset-glow {
+    display: block;
+    background: radial-gradient(circle at center bottom, rgba(255,72,0,0.6) 0%, rgba(255,174,0,0.2) 50%, transparent 80%);
+    filter: blur(30px);
+}
+body.style-sunset #year-display { color: var(--acc-sec); text-shadow: 0 0 20px var(--acc-primary); font-family: 'Anton'; }
+body.style-sunset input[type=range]::-webkit-slider-thumb { background: var(--acc-primary); box-shadow: 0 0 10px var(--acc-primary); }
+
+body.style-sunset .logo-wrapper {
+    border: 5px solid #fff; display: inline-block; padding: 5px 20px; transform: skewX(-5deg); margin-bottom: 20px;
+}
+body.style-sunset .logo-text { font-family: 'Anton', sans-serif; font-size: 3.5rem; letter-spacing: -1px; }
+body.style-sunset .status-badge { background: var(--acc-primary); color: #000; font-weight: bold; text-transform: uppercase; letter-spacing: 3px; padding: 2px 10px; margin-top: 5px; }
+body.style-sunset .container { max-width: 1200px; margin: 0 auto; padding: 30px; text-align: center; }
+
+body.style-sunset .main-nav { display: flex; justify-content: center; gap: 15px; margin-top: 20px; }
+body.style-sunset .main-nav a {
+    text-decoration: none; color: #fff; font-family: 'Anton', sans-serif; font-size: 1.2rem;
+    text-transform: uppercase; letter-spacing: 1px; padding: 12px 25px; border: 3px solid #fff;
+    background: rgba(0,0,0,0.4); transform: skewX(-10deg); transition: all 0.3s ease; box-shadow: 5px 5px 0 rgba(0,0,0,0.5);
+}
+body.style-sunset .main-nav a:hover { background: var(--acc-primary); border-color: var(--acc-primary); color: #000; box-shadow: 0 0 25px var(--acc-primary); transform: skewX(-10deg) translateY(-5px); }
+
+body.style-sunset .photo-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px; }
+body.style-sunset .card { width: 300px; background: #000; border: 1px solid #333; position: relative; transform: skewX(-2deg); transition: 0.3s; }
+body.style-sunset .card:hover { transform: skewX(-2deg) translateY(-5px); border-color: var(--acc-primary); box-shadow: 0 10px 30px rgba(255,72,0,0.3); }
+body.style-sunset .card img { filter: grayscale(100%); transition: 0.5s; }
+body.style-sunset .card:hover img { filter: grayscale(0%); }
+body.style-sunset .card-txt { position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(to top, #000, transparent); padding: 20px; text-align: left; }
+body.style-sunset .card-txt h3 { font-family: 'Anton', sans-serif; font-size: 1.5rem; text-transform: uppercase; color: #fff; }
+
+
+/* ============================================================
+   2. STYLE: NEON / CLUB (2013 - 2020)
+   ============================================================ */
+body.style-neon {
+    background-color: #0a0010; color: #ddd; font-family: 'Montserrat', sans-serif; font-weight: 900;
+    --neon-purple: #bd00e3; --neon-green: #b3e000;
+}
+body.style-neon .bg-neon-beams {
+    display: block; background: repeating-linear-gradient(90deg, rgba(189, 0, 227, 0.03) 0px, rgba(189, 0, 227, 0.03) 50px, transparent 50px, transparent 100px);
+    box-shadow: inset 0 0 150px #000;
+}
+body.style-neon #year-display { color: var(--neon-green); font-family: 'Orbitron', sans-serif; font-weight: 900; text-shadow: 1px 1px 5px var(--neon-purple); }
+body.style-neon #cockpit { border-color: var(--neon-purple); background: rgba(10,0,16,0.9); }
+body.style-neon input[type=range]::-webkit-slider-thumb { background: var(--neon-green); border: 2px solid #000; }
+
+body.style-neon .main-header { padding-top: 20px; text-align: center; }
+body.style-neon .logo-text, body.style-neon .status-badge { display: none; }
+body.style-neon .logo-image { display: block; max-width: 350px; width: 90%; height: auto; margin: 0 auto 20px auto; filter: drop-shadow(0 0 8px var(--neon-purple)); }
+body.style-neon .container { max-width: 1000px; margin: 0 auto; padding: 30px; text-align: center; }
+body.style-neon .main-nav a { color: var(--neon-green); text-decoration: none; margin: 0 10px; text-transform: uppercase; font-size: 1.2rem; font-family: 'Anton', sans-serif; letter-spacing: 1px; text-shadow: 1px 1px 2px #000; }
+body.style-neon #era-title { font-family: 'Anton', sans-serif; text-transform: uppercase; font-size: 2.5rem; color: var(--neon-purple); margin-bottom: 20px; text-shadow: 2px 2px 0 #000; }
+body.style-neon .photo-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 40px; }
+body.style-neon .card { width: 300px; background: #150020; border: 2px solid var(--neon-purple); box-shadow: 4px 4px 0 rgba(0,0,0,0.6); transition: 0.3s; }
+body.style-neon .card:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--neon-green); border-color: var(--neon-green); }
+body.style-neon .card img { border-bottom: 2px solid var(--neon-purple); mix-blend-mode: normal; filter: brightness(0.8); }
+body.style-neon .card:hover img { filter: brightness(1); }
+body.style-neon .card-txt h3 { color: var(--neon-green); font-family: 'Anton', sans-serif; letter-spacing: 1px; margin: 10px 0; text-transform: uppercase; }
+body.style-neon .logo-2006 { display: none}
+
+/* ============================================================
+   3. STYLE: MID / CHROME Y2K 
+   ============================================================ */
+body.style-mid { background-color: #0a1525; color: #e0e0e0; font-family: 'Orbitron', sans-serif; --chrome-blue: #0070ff; }
+body.style-mid .bg-chrome-waves {
+    display: block;
+    background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, transparent 50%, rgba(0,0,0,0.8) 100%), repeating-linear-gradient(90deg, #0a1525, #1c2e4a 50px, #0a1525 100px);
+}
+body.style-mid .bg-chrome-waves::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: repeating-linear-gradient(transparent 0px, transparent 2px, rgba(0,0,0,0.4) 3px); pointer-events: none; opacity: 0.5; }
+body.style-mid #year-display { color: var(--chrome-blue); font-family: 'Orbitron', sans-serif; text-shadow: 0 0 15px var(--chrome-blue); }
+body.style-mid #cockpit { background: linear-gradient(to bottom, #333, #111); border: 2px solid #555; border-top: 2px solid #999; box-shadow: 0 5px 20px rgba(0, 112, 255, 0.3); }
+body.style-mid input[type=range]::-webkit-slider-thumb { background: #fff; border: 2px solid var(--chrome-blue); box-shadow: 0 0 10px var(--chrome-blue); }
+
+body.style-mid .container { max-width: 960px; margin: 30px auto; padding: 20px; text-align: center; }
+body.style-mid .main-header { background: linear-gradient(to bottom, #1c2e4a, #0a1525); border-bottom: 3px solid var(--chrome-blue); padding: 20px; margin-bottom: 40px; box-shadow: 0 5px 15px rgba(0, 112, 255, 0.2); }
+body.style-mid .logo-text {
+    font-family: 'Orbitron', sans-serif; font-weight: 900; color: #fff; font-size: 3rem; letter-spacing: 5px;
+    background: linear-gradient(to bottom, #fff 0%, #aaa 50%, #fff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 5px var(--chrome-blue));
+}
+body.style-mid .status-badge { display: none; }
+body.style-mid .main-nav { margin-top: 20px; display: flex; justify-content: center; gap: 10px; }
+body.style-mid .main-nav a { background: linear-gradient(to bottom, #ddd, #999); color: #0a1525; padding: 10px 25px; text-decoration: none; font-weight: 900; font-size: 0.9rem; text-transform: uppercase; border: 2px solid #0a1525; transform: skewX(-15deg); box-shadow: inset 0 0 5px rgba(0,0,0,0.5); }
+body.style-mid .main-nav a:hover { background: var(--chrome-blue); color: #fff; box-shadow: 0 0 15px var(--chrome-blue); border-color: #fff; }
+body.style-mid #era-title { color: var(--chrome-blue); font-family: 'Orbitron'; letter-spacing: 2px; margin-bottom: 20px; }
+body.style-mid .photo-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+body.style-mid .card { width: 45%; background: #0f1f3d; border: 2px solid var(--chrome-blue); padding: 5px; box-shadow: 0 0 10px rgba(0, 112, 255, 0.1); }
+body.style-mid .card img { margin-bottom: 10px; border: 1px solid #555; }
+body.style-mid .card-txt h3 { color: var(--chrome-blue); font-family: 'Orbitron'; font-size: 1.2rem; text-transform: uppercase; }
+
+
+/* ============================================================
+   4. STYLE: 2006 - 2010 (Der dunkle "Maifest" Look)
+   ============================================================ */
+body.style-2006 { background-color: #000000; color: #ffffff; font-family: Arial, sans-serif; }
+body.style-2006 .default-logo, body.style-2006 .logo-text, body.style-2006 .status-badge { display: none; }
+
+body.style-2006 .logo-2006 { 
+    display: block; 
+    max-width: 95%; 
+    width: 727px; 
+    margin: 0 auto; 
+    height: auto;
+}
+
+body.style-2006 .main-nav {
+    background-color: #4a0000;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-top: 20px;
+}
+
+body.style-2006 .main-nav a {
+    color: #fff; text-decoration: none; font-weight: bold; font-size: 11px; padding: 12px 20px;
+    border-right: 1px solid #000; text-transform: uppercase; background: transparent; box-shadow: none; transform: none;
+}
+body.style-2006 .main-nav a:hover { background-color: #7a0000; }
+
+body.style-2006 .info-bar { background: linear-gradient(to bottom, #444, #111); border: 1px solid #555; margin: 20px auto; padding: 8px; max-width: 900px; }
+body.style-2006 #era-title { color: #fff; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; }
+
+body.style-2006 .photo-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px; }
+body.style-2006 .card { width: 320px; background-color: #1a1a1a; border: 1px solid #333; transform: none; box-shadow: none; }
+body.style-2006 .card h3 { background: #333; padding: 6px 10px; font-size: 14px; color: #fff; border-bottom: 1px solid #444; }
+body.style-2006 .card img { filter: none; border-bottom: 1px solid #333; height: 200px; object-fit: cover; }
+
+body.style-2006 #cockpit { border-color: #7a0000; }
+body.style-2006 #year-display { color: #7a0000; }
+
+/* ============================================================
+   5. STYLE: RETRO (2001 - 2005)
+   ============================================================ */
+body.style-retro {
+    background-color: #333; color: #ccc; font-family: 'Verdana', sans-serif;
+    background-image: repeating-linear-gradient(45deg, #2a2a2a 0, #2a2a2a 1px, transparent 0, transparent 50%); background-size: 6px 6px;
+}
+body.style-retro #year-display { color: #ff6600; font-family: 'Verdana', sans-serif; letter-spacing: 0; }
+body.style-retro #cockpit { background: #222; border: 1px solid #ff6600; border-radius: 0; box-shadow: none; }
+body.style-retro input[type=range]::-webkit-slider-thumb { background: #ff6600; border-radius: 0; border: none; }
+body.style-retro .container { width: 780px; margin: 0 auto; background: #222; border-left: 2px solid #555; border-right: 2px solid #555; min-height: 100vh; padding: 0; }
+body.style-retro .main-header { background: #000; border-bottom: 4px solid #ff6600; padding: 15px; text-align: left; }
+body.style-retro .logo-text { font-family: 'Arial Black', sans-serif; color: #ff6600; font-size: 1.5rem; margin: 0; }
+body.style-retro .status-badge { display: none; }
+body.style-retro .main-nav { background: #444; padding: 5px; border-top: 1px solid #666; margin-top: 10px; text-align: center; }
+body.style-retro .main-nav a { color: #fff; text-decoration: none; font-size: 11px; padding: 0 15px; border-right: 1px solid #777; text-transform: uppercase; font-weight: normal; letter-spacing: 0; }
+body.style-retro #era-title { font-size: 12px; color: #ff6600; text-decoration: underline; background: #111; padding: 5px; margin: 10px; border: 1px solid #444; }
+body.style-retro .photo-grid { display: block; padding: 10px; }
+body.style-retro .card { display: flex; background: #1a1a1a; border: 1px solid #555; margin-bottom: 10px; padding: 5px; align-items: center; }
+body.style-retro .card img { width: 120px; height: 90px; border: 2px solid #ff6600; margin-right: 10px; object-fit: cover; }
+body.style-retro .card-txt h3 { font-size: 12px; color: #ff6600; text-decoration: underline; font-family: 'Verdana'; margin-bottom: 5px; }
+body.style-retro .card-txt p { font-size: 10px; }
+
+
+/* =========================================
+   COMMON & HELPER
+   ========================================= */
+.card-link { display: inline-block; margin-top: 15px; padding: 5px 15px; text-decoration: none; font-weight: bold; font-size: 0.8rem; transition: 0.3s; }
+
+body.style-sunset .card-link { background: var(--acc-primary); color: #000; transform: skewX(-10deg); }
+body.style-neon .card-link { border: 1px solid var(--neon-purple); color: var(--neon-purple); background: transparent; }
+body.style-neon .card-link:hover { background: var(--neon-purple); color: #fff; box-shadow: 0 0 10px var(--neon-purple); }
+body.style-mid .card-link { background: linear-gradient(to bottom, #fff, #aaa); color: #0a1525; border-radius: 3px; }
+body.style-2006 .card-link { color: #ff0000; text-decoration: underline; }
+body.style-retro .card-link { color: #ff6600; text-decoration: underline; font-family: 'Verdana', sans-serif; }
+
+/* BILD-SCALING */
+body.style-sunset .card img, body.style-neon .card img, body.style-2006 .card img { width: 100%; height: 250px; object-fit: cover; object-position: center; }
+body.style-mid .card img { width: 100%; height: 200px; object-fit: cover; }
+body.style-retro .card img { width: 120px; height: 120px; object-fit: cover; flex-shrink: 0; }
+
+
+/* =========================================
+   RESPONSIVE DESIGN (Media Queries)
+   ========================================= */
+@media (max-width: 768px) {
+    #cockpit { bottom: 10px; padding: 10px; width: 95%; }
+    #year-display { font-size: 2rem; }
+
+    /* Mobile: 2006 Style (NEU) */
+    body.style-2006 .main-nav { flex-direction: column; }
+    body.style-2006 .main-nav a { border-right: none; border-bottom: 1px solid #330000; width: 100%; text-align: center; }
+    body.style-2006 .logo-2006 { width: 95%; }
+
+    /* Mobile: Sunset */
+    body.style-sunset .main-nav { flex-direction: column; gap: 10px; align-items: center; }
+    body.style-sunset .main-nav a { width: 80%; transform: skewX(-5deg); padding: 10px; }
+    body.style-sunset .logo-text { font-size: 2.2rem; }
+    body.style-sunset .card { width: 100%; max-width: 350px; }
+
+    /* Mobile: Neon */
+    body.style-neon .logo-image { max-width: 250px; }
+    body.style-neon .main-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    body.style-neon .card { width: 100%; }
+
+    /* Mobile: Mid */
+    body.style-mid .logo-text { font-size: 1.8rem; letter-spacing: 2px; }
+    body.style-mid .card { width: 100%; }
+
+    /* Mobile: Retro */
+    body.style-retro .container { width: 100%; border: none; }
+    body.style-retro .card { flex-direction: column; text-align: center; }
+    body.style-retro .card img { margin: 0 auto 10px auto; width: 100%; height: auto; }
+    body.style-retro .main-nav a { display: inline-block; padding: 5px; border-bottom: 1px solid #777; border-right: none; }
+}
+
+@media (max-width: 480px) {
+    .logo-text { font-size: 1.5rem !important; }
+    #year-display { font-size: 1.5rem; }
+}
