@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jugendverein Hof | Projekt Blau</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blue-gallery.css">
+</head>
+<body class="style-blue blue-photo-page">
+
+    <header class="blue-banner-header">
+        <img src="JuvBanner2010.gif" alt="Jugendverein Hof Logo" class="main-banner-img">
+    </header>
+
+    <nav class="original-nav">
+        <a href="index.html" class="nav-btn"><span>HOME</span></a>
+        <a href="#" class="nav-btn"><span>CHRONIK</span></a>
+        <a href="#" class="nav-btn"><span>VORSTAND</span></a>
+        <a href="#" class="nav-btn"><span>ZEITLEISTE</span></a>
+    </nav>
+
+    <main class="container">
+        <section class="blue-info-bar">
+            <h2 id="era-title">// ARCHIV_DATEN: <span id="event-name">Lädt...</span></h2>
+        </section>
+
+        <div id="gallery-container" class="blue-flex-grid photo-grid">
+            </div>
+    </main>
+
+    <script src="loadimages.js"></script>
+
+    <script>
+        window.onload = function() {
+            // Parameter aus der URL auslesen
+            const params = new URLSearchParams(window.location.search);
+            const year = params.get('year') || '2015';
+            const fest = params.get('fest') || 'Event';
+
+            const headerTitle = document.querySelector('#event-name');
+            if (headerTitle) {
+                // Text dynamisch setzen
+                headerTitle.innerText = `${fest.toUpperCase()} ${year}`;
+            }
+
+            document.title = `Projekt Blau: ${fest.toUpperCase()} ${year}`;
+            loadGallery(year, fest);
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+/* ============================================================
+   SUNSET THEME - GOOGLE PHOTOS LOGIC (RECONSTRUCTED)
+   ============================================================ */
+
+:root {
+    --acc-primary: #ff4800;
+    --acc-sec: #ffae00;
+}
+
+body.style-sunset {
+    background-color: #1a0500;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* 1. Hintergrund-Glow aus dem Snippet */
+.bg-sunset-glow {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center bottom, rgba(255,72,0,0.4) 0%, rgba(255,174,0,0.1) 50%, transparent 80%);
+    filter: blur(50px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* 2. Logo & Nav (Sunset Style) */
+.logo-wrapper {
+    border: 5px solid #fff;
+    display: inline-block;
+    padding: 5px 25px;
+    transform: skewX(-5deg);
+    margin-bottom: 30px;
+    background: rgba(0,0,0,0.3);
+}
+
+.logo-text {
+    font-family: 'Anton', sans-serif;
+    font-size: 3.5rem;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+.status-badge {
+    background: var(--acc-primary);
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 4px 15px;
+    margin-top: 8px;
+    font-size: 0.9rem;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border: 3px solid #fff;
+    background: rgba(0,0,0,0.4);
+    transform: skewX(-10deg);
+    transition: all 0.3s ease;
+    box-shadow: 5px 5px 0 rgba(0,0,0,0.5);
+}
+
+.main-nav a:hover {
+    background: var(--acc-primary);
+    border-color: var(--acc-primary);
+    color: #000;
+    box-shadow: 0 0 25px var(--acc-primary);
+    transform: skewX(-10deg) translateY(-5px);
+}
+
+/* 3. DAS GRID (Deine Logik aus der Red-Gallery) */
+.photo-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 12px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.justified-item, .card {
+    flex: 1 1 auto !important; /* Erlaubt proportionales Wachstum */
+    height: 300px !important;    /* Feste Zeilenhöhe */
+    width: auto !important;      /* Hebt feste Breiten aus der style.css auf */
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+    border: 1px solid #333;
+    transform: skewX(-2deg);     /* Sunset Schräglage */
+    transition: 0.3s ease;
+}
+
+.justified-item img, .card img {
+    height: 100% !important;
+    width: auto !important;      /* Bild bestimmt die Breite des Rahmens */
+    min-width: 100%;
+    object-fit: cover;           /* Verhindert Verzerrung */
+    display: block;
+    filter: grayscale(100%);     /* Startet Schwarz-Weiß */
+    transition: 0.5s ease;
+}
+
+/* Hover-Effekte (Sunset Style) */
+.justified-item:hover, .card:hover {
+    transform: skewX(-2deg) translateY(-5px);
+    border-color: var(--acc-primary);
+    box-shadow: 0 10px 30px rgba(255,72,0,0.3);
+    z-index: 10;
+}
+
+.justified-item:hover img, .card:hover img {
+    filter: grayscale(0%);       /* Wird farbig beim Hover */
+    transform: scale(1.05);
+}
+
+/* Text-Overlay (Anton Font) */
+.card-txt {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, #000, transparent);
+    padding: 20px;
+    transform: skewX(2deg);      /* Text-Reset */
+}
+
+.card-txt h3 {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0;
+}
+
+/* 4. Letzte Reihe Fix (Deine Logik) */
+.photo-grid::after {
+    content: '';
+    flex-grow: 999 !important;
+}
+
+/* 5. Mobile Anpassung */
+@media (max-width: 768px) {
+    .justified-item, .card {
+        height: 200px !important;
+    }
+}

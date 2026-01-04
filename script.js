@@ -3,7 +3,7 @@
 // ==========================================
 const eventDatabase = {
     // Ära 1: Retro (bis 2007)
-    "2001":[{title:"Jugendball",text:"Thema: Adam & Eva",img:"",link:"2001/Jugendball2001.html"},{title:"s'Festl",text:"Das erste organisierte Fest",img:"",link:"2001/sFestl2001.html"}],
+    "2001":[{title:"Jugendball",text:"Thema: Adam & Eva",img:"",link:"2001gallery.html?year=2001&fest=jugendball"},{title:"s'Festl",text:"Das erste organisierte Fest",img:"",link:"2001/sFestl2001.html"}],
     "2002":[{title:"Jugendball",text:"Thema: Eine Welt",img:"https://drive.google.com/thumbnail?id=1gogTIC9YMdMMWtVCguxaad7JwMw72Xvt&sz=w1000",link:"2002/Jugendball2002.html"}],
     "2003":[{title:"Jugendball",text:"Thema: Mythen und Legenden",img:"",link:"2003/Jugendball2003.html"}],
     "2004":[{title:"Jugendball",text:"Thema: Himmel & Hölle",img:"",link:"2004/Jugendball2004.html"},{title:"Maifest",text:"Das legendäre Maifest",img:""},{title:"Seifenkistenrennen",text:"",img:""}],
@@ -92,14 +92,17 @@ function renderContent(year) {
         eventDatabase[year].forEach(event => {
             // Platzhalter Bild, falls keines angegeben ist
             const imgSrc = event.img ? event.img : `https://picsum.photos/400/300?random=${Math.random()}`;
+
             
             html += `
                 <article class="card">
-                    <img src="${imgSrc}" alt="${event.title}">
-                    <div class="card-txt">
-                        <h3>${event.title}</h3>
-                        <p>${event.text}</p>
-                    </div>
+                    <a href="${galleryUrl}">
+                        <img src="${imgSrc}" alt="${event.title}">
+                        <div class="card-txt">
+                            <h3>${event.title}</h3>
+                            <p>${event.text}</p>
+                        </div>
+                    </a>
                 </article>
             `;
         });
@@ -121,9 +124,29 @@ function renderContent(year) {
     if (eventDatabase[year]) {
         eventDatabase[year].forEach(event => {
             const imgSrc = event.img ? event.img : `https://picsum.photos/400/300?random=${Math.random()}`;
+
+            const festSafe = event.title.toLowerCase().replace(/[^a-z0-9]/g, '');
+            // Muss die Jahr logik noch einfügen
+            let galleryUrl = '';
+            const currentYear = parseInt(year); // In Zahl umwandeln
+
+            // 2. Korrekte Bereichsabfrage mit && (UND)
+            if (currentYear >= 2001 && currentYear <= 2005) {
+                galleryUrl = `2001gallery.html?year=${year}&fest=${festSafe}`;
+            } else if (currentYear >= 2006 && currentYear <= 2010) {
+                galleryUrl = `2006gallery.html?year=${year}&fest=${festSafe}`;
+            } else if (currentYear >= 2011 && currentYear <= 2014) {
+                galleryUrl = `2011gallery.html?year=${year}&fest=${festSafe}`;
+            } else if (currentYear >= 2015 && currentYear <= 2020) {
+                galleryUrl = `2015gallery.html?year=${year}&fest=${festSafe}`;
+            } else if (currentYear >= 2021 && currentYear <= 2025) {
+                galleryUrl = `2021gallery.html?year=${year}&fest=${festSafe}`;
+            } else {
+                galleryUrl = `2001gallery.html?year=${year}&fest=${festSafe}`;
+            }
             
             // Prüfen ob ein Link da ist, falls ja -> HTML für Button erstellen
-            const linkHtml = event.link ? `<a href="${event.link}" class="card-link" target="_blank">MEHR INFOS</a>` : '';
+            const linkHtml =  `<a href="${galleryUrl}" class="card-link" target="_blank">MEHR INFOS</a>`;
             
             html += `
                 <article class="card">

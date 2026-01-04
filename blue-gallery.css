@@ -1,98 +1,209 @@
 /* ============================================================
-   BLUE THEME - JUSTIFIED GALLERY (Google Photos Look)
+   BLUE THEME - PROJEKT BLAU (Update mit Juvbanner2010.gif)
    ============================================================ */
 
 :root {
-    --juv-blue: #004488;
-    --juv-blue-light: #00aaff;
-    --juv-blue-dark: #002244;
+    --main-blue: #00aaff;  /* Das leuchtende Cyan */
+    --dark-bg: #050a14;    /* Dunkelster Hintergrund */
+    --info-blue: #001a33;  /* Balken-Hintergrund */
 }
 
-/* 1. Container: Flexbox erzwingen */
-.blue-flex-grid, .photo-grid {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 12px;
-    padding: 20px;
+/* --- HINTERGRUND (Gitter & Streifen) --- */
+/* --- DER KOMPLETTE HINTERGRUND FÜR DIE SEITE --- */
+.blue-photo-page {
     background-color: #000;
+
+    /* 1. Ebene: 60% schwarzer Schleier | 2. Ebene: Das Hintergrund-GIF */
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+        url('Bannerbackground.gif');
+
+    /* Sorgt dafür, dass das Bild immer den ganzen Bildschirm füllt */
+    background-size: cover;
+    
+    /* Zentriert das Bild */
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+    /* FIXIERT das Bild beim Scrollen für den Parallax-Effekt */
+    background-attachment: fixed;
+    margin: 0;
 }
 
-/* 2. Die Card: Flexibel statt fest (hebelt style.css aus) */
-.justified-item, .card {
-    flex: 1 1 auto !important; /* Proportionales Wachstum */
-    height: 280px !important;    /* Zeilenhöhe auf Desktop */
-    width: auto !important;      /* WICHTIG: Hebt feste 320px auf */
+.blue-banner-header {
+    /* Fallback-Farbe, falls das Bild nicht lädt */
+    background-color: #000;
+
+    /* HIER IST DER TRICK: ZWEI HINTERGRUND-EBENEN */
+    /* Ebene 1 (oben): Ein schwarzer Schleier (0.6 = 60% Deckkraft) */
+    /* Ebene 2 (unten): Dein neues Hintergrund-GIF */
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('Bannerbackground.gif'); /* Stelle sicher, dass der Dateiname exakt stimmt! */
+
+    /* Positionierung des Hintergrunds */
+    background-position: center center; /* Zentriert das GIF */
+    background-repeat: no-repeat;       /* Kein Kacheln */
+    /* 'cover' sorgt dafür, dass der Bereich immer ausgefüllt ist, 
+       egal wie breit der Bildschirm ist. */
+    background-size: cover;             
+
+    /* Innenabstand, damit das Logo Platz hat */
+    padding: 40px 0; 
+    
+    text-align: center;
+    border-bottom: 3px solid var(--main-blue);
+    
+    /* Ein leichter Schatten nach innen für mehr Tiefe */
+    box-shadow: inset 0 0 30px rgba(0,0,0,0.8);
+    position: relative;
+}
+
+/* Das Logo im Vordergrund (bleibt wie vorher optimiert) */
+.main-banner-img {
+    max-width: 900px;   /* Begrenzung auf großen Screens */
+    width: 95%;         /* Flexibel auf Handys */
+    height: auto;
+    display: block;
+    margin: 0 auto;     /* Zentriert */
+    /* Der Schein hilft, das Logo vom Hintergrund abzuheben */
+    filter: drop-shadow(0 0 15px rgba(0, 170, 255, 0.5));
+    position: relative; /* Stellt sicher, dass es über dem Hintergrund liegt */
+    z-index: 2;
+}
+
+/* --- SCHRÄGE BUTTONS --- */
+/* ============================================================
+   CHROME Y2K NAVIGATION BUTTONS (Exakt kopiert)
+   ============================================================ */
+
+:root {
+    /* Die spezifische Farbe aus deinem style-mid Snippet */
+    --chrome-blue: #0070ff; 
+}
+
+/* Der Navigations-Container */
+.original-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Leicht transparent, damit Hintergrund durchscheint */
+}
+
+/* Die Buttons exakt nach deiner Vorlage */
+.nav-btn {
+    /* Silberner Farbverlauf */
+    background: linear-gradient(to bottom, #ddd, #999) !important;
+    color: #0a1525 !important;
+    padding: 10px 25px !important;
+    text-decoration: none !important;
+    font-weight: 900 !important;
+    font-size: 0.9rem !important;
+    text-transform: uppercase !important;
+    border: 2px solid #0a1525 !important;
+    
+    /* Die spezifische Schräglage aus style-mid */
+    transform: skewX(-15deg) !important; 
+    
+    /* Schatteneffekt innen */
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.5) !important;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+/* Korrektur für den Text innerhalb des schrägen Buttons */
+.nav-btn span {
+    display: block;
+    /* Text muss entgegengesetzt gedreht werden, um gerade zu stehen */
+    transform: skewX(15deg) !important; 
+}
+
+/* Hover-Effekt exakt nach Vorlage */
+.nav-btn:hover {
+    background: var(--chrome-blue) !important;
+    color: #fff !important;
+    box-shadow: 0 0 15px var(--chrome-blue) !important;
+    border-color: #fff !important;
+    cursor: pointer;
+}
+/* --- INFO-BALKEN --- */
+.blue-info-bar {
+    /* Dunkler Metallic-Farbverlauf aus deinem style-mid Snippet */
+    background: linear-gradient(to bottom, #1c2e4a, #0a1525) !important;
+    
+    /* Rahmen und Akzent wie beim Header */
+    border: 2px solid #555 !important;
+    border-left: 5px solid var(--chrome-blue) !important;
+    border-bottom: 3px solid var(--chrome-blue) !important;
+    
+    /* Leuchteffekt (Glow) nach außen */
+    box-shadow: 0 5px 20px rgba(0, 112, 255, 0.3) !important;
+    
+    /* Schräglage passend zu den Buttons (-15 Grad) */
+    transform: skewX(-15deg) !important;
+    
+    margin: 30px auto !important;
+    width: 90% !important;
+    padding: 15px 30px !important;
     position: relative;
     overflow: hidden;
-    background-color: #001122;
-    border: 1px solid var(--juv-blue);
+}
+
+/* Der Text innerhalb des Balkens */
+.blue-info-bar h2 {
+    /* Orbitron Font und blauer Glow aus deinem Snippet */
+    font-family: 'Orbitron', sans-serif !important;
+    color: #fff !important;
+    text-transform: uppercase !important;
+    letter-spacing: 3px !important;
     margin: 0 !important;
-    box-shadow: 0 0 10px rgba(0, 170, 255, 0.1);
+    font-size: 1.2rem !important;
+    
+    /* Text wieder gerade biegen (+15 Grad) */
+    transform: skewX(15deg) !important;
+    
+    /* Blauer Schatteneffekt für den futuristischen Look */
+    text-shadow: 0 0 10px var(--chrome-blue), 0 0 20px var(--chrome-blue) !important;
 }
 
-/* 3. Das Bild: Bestimmt die Breite des Elements */
-.justified-item img, .card img {
-    height: 100% !important;
-    width: auto !important;      /* Breite folgt dem Seitenverhältnis */
-    min-width: 100%;
-    object-fit: cover;           /* Lückenloses Füllen */
-    display: block;
-    transition: filter 0.3s ease, transform 0.5s ease;
-}
-
-/* 4. Letzte Reihe Fix */
-.photo-grid::after, .blue-flex-grid::after {
+/* Optional: Ein technischer Glanz-Effekt oben auf dem Balken */
+.blue-info-bar::before {
     content: '';
-    flex-grow: 999 !important;
-}
-
-/* --- OPTIK & EFFEKTE (Blaues Design) --- */
-
-.justified-item:hover {
-    border-color: var(--juv-blue-light);
-    box-shadow: 0 0 20px rgba(0, 170, 255, 0.4);
-    z-index: 10;
-}
-
-.justified-item:hover img {
-    transform: scale(1.05);
-    filter: brightness(1.2) saturate(1.2);
-}
-
-/* Bildunterschrift: Modernes Blau-Overlay */
-.card-txt {
     position: absolute;
-    bottom: 0;
+    top: 0;
+    left: 0;
     width: 100%;
-    background: linear-gradient(to top, var(--juv-blue-dark), transparent);
-    padding: 15px 5px 5px 5px;
-    transform: translateY(100%);
-    transition: transform 0.3s ease-out;
-    text-align: center;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.1) 0%, transparent 100%);
+    pointer-events: none;
+}
+/* --- GOOGLE PHOTOS GRID --- */
+.blue-flex-grid {
+    display: flex;
+    flex-wrap: wrap; /* Erlaubt Zeilenumbruch */
+    gap: 12px;
+    padding: 20px;
 }
 
-.justified-item:hover .card-txt {
-    transform: translateY(0);
+.justified-item {
+    flex: 1 1 auto; /* Proportionales Wachstum */
+    height: 280px;  /* Zeilenhöhe */
+    width: auto;
+    border: 2px solid var(--main-blue);
+    background: #000;
+    overflow: hidden;
 }
 
-.card-txt h3 {
-    color: var(--juv-blue-light);
-    font-size: 11px;
-    font-family: 'Segoe UI', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-shadow: 0 0 5px #000;
+.justified-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Füllt den Container lückenlos */
+    transition: transform 0.3s ease;
 }
 
-/* Header & Nav Styling für das Blau-Theme */
-.blue-header { background: #001122; border-bottom: 2px solid var(--juv-blue); padding: 15px; }
-.logo-blue { color: #fff; font-weight: bold; letter-spacing: 2px; }
-.logo-blue span { color: var(--juv-blue-light); }
-.blue-info-bar { border-left: 5px solid var(--juv-blue-light); background: #001a33; padding: 10px; margin: 20px; }
-
-/* 5. Mobile Anpassung */
-@media (max-width: 768px) {
-    .justified-item, .card {
-        height: 180px !important; /* Niedrigere Zeilen für Handys */
-    }
+/* Letzte Reihe bündig */
+.photo-grid::after {
+    content: '';
+    flex-grow: 999;
 }
