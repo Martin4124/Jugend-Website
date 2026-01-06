@@ -29,7 +29,7 @@ async function loadGallery(year, festType) {
                     <a href="${img.url}">
                         <img src="${img.url}" alt="${img.name}" loading="lazy" >
                     <div class="card-txt retro-caption">
-                        <h3>${img.name}</h3>
+                        <h3></h3>
                     </div>
                     </a>
                 </article>`;
