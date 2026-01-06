@@ -3,36 +3,150 @@
 // ==========================================
 const eventDatabase = {
     // Ära 1: Retro (bis 2007)
-    "2001":[{title:"Jugendball",text:"Thema: Adam & Eva",img:"",link:""},{title:"s'Festl",text:"Das erste organisierte Fest",img:"",link:""}],
-    "2002":[{title:"Jugendball",text:"Thema: Eine Welt",img:"https://drive.google.com/thumbnail?id=1gogTIC9YMdMMWtVCguxaad7JwMw72Xvt&sz=w1000",link:"2002/Jugendball2002.html"}],
-    "2003":[{title:"Jugendball",text:"Thema: Mythen und Legenden",img:"",link:"2003/Jugendball2003.html"}],
-    "2004":[{title:"Jugendball",text:"Thema: Himmel & Hölle",img:"",link:"2004/Jugendball2004.html"},{title:"Maifest",text:"Das legendäre Maifest",img:""},{title:"Seifenkistenrennen",text:"",img:""}],
-    "2005":[{title:"Jugendball",text:"Thema: Märchen",img:"",link:"2005/Jugendball2005.html"}],
-    "2006":[{title:"Jugendball",text:"Thema: Liebe",img:"",link:"2006/Jugendball2006.html"}],
+  "2001": [
+    { "title": "Jugendball", "text": "Thema: Adam & Eva", "img": "" },
+    { "title": "s'Festl", "text": "Das erste organisierte Fest", "img": "" }
+  ],
 
-    "2007": [ ],
+  "2002": [
+    { "title": "Jugendball", "text": "Thema: Eine Welt", "img": "" }
+  ],
 
-    
-    "2008":[{title:"Jugendball",text:"Thema: Sweet Dreams",img:"",link:"2008/Jugendball2008.html"}],
-    "2009":[{title:"Jugendball",text:"Thema: Movies",img:"",link:"2009/Jugendball2009.html"}],
-    "2010":[{title:"Jugendball",text:"Thema: Music",img:"",link:"2010/Jugendball2010.html"}],
-    "2011":[{title:"Jugendball",text:"Thema: Casino Royale & 10 Jahre Jugend",img:"",link:"2011/Jugendball2011.html"}],
-    "2012":[{title:"Jugendball",text:"Thema: Under the Sea",img:"",link:"2012/Jugendball2012.html"}],
+  "2003": [
+    { "title": "Jugendball", "text": "Thema: Mythen und Legenden", "img": "" },
+    { "title": "Festl", "text": "", "img": "" }
+  ],
 
-    "2013":[{title:"Jugendball",text:"Thema: Wild, Wild West",img:"",link:"2013/Jugendball2013.html"}],
-    "2014":[{title:"Jugendball",text:"Thema: Rock'n Blues",img:"",link:"2014/Jugendball2014.html"}],
-    "2015":[{title:"Jugendball",text:"Thema: Jungle",img:"",link:"2015/Jugendball2015.html"}],
-    "2016":[{title:"Jugendball",text:"Thema: Frozen",img:"",link:"2016/Jugendball2016.html"}],
-    "2017":[{title:"Jugendball",text:"Thema: Moulin Rouge",img:"",link:"2017/Jugendball2017.html"}],
-    "2018":[{title:"Jugendball",text:"Thema: Wonderland",img:"",link:"2018/Jugendball2018.html"}],
-    "2019":[{title:"Jugendball",text:"Thema: Fire & Ice",img:"",link:"2019/Jugendball2019.html"}],
-    "2020":[{title:"Jugendball",text:"Thema: Griechischer Olymp",img:"",link:"2020/Jugendball2020.html"}],
+  "2004": [
+    { "title": "Jugendball", "text": "Thema: Himmel & Hölle", "img": "" },
+    { "title": "Maifest", "text": "Das legendäre Maifest", "img": "" },
+    { "title": "Seifenkistenrennen", "text": "", "img": "" },
+    { "title": "Festl", "text": "", "img": "" }
+  ],
 
-    "2021":[],
-    "2022":[],
-    "2023":[{title:"Jugendball",text:"Thema: Great Gatsby",img:"",link:"2023/Jugendball2023.html"}],
-    "2024":[{title:"Jugendball",text:"Thema: Flower Power",img:"",link:"2024/Jugendball2024.html"}],
-    "2025":[{title:"Jugendball",text:"Thema: Mamma Mia",img:"",link:"2025/Jugendball2025.html"}],
+  "2005": [
+    { "title": "Jugendball", "text": "Thema: Märchen", "img": "" },
+    { "title": "Schneebar", "text": "", "img": "" },
+    { "title": "Seifenkistenrennen", "text": "", "img": "" }
+  ],
+
+  "2006": [
+    { "title": "Jugendball", "text": "Thema: Liebe", "img": "" },
+    { "title": "Maifest", "text": "", "img": "" },
+    { "title": "Festl", "text": "", "img": "" }
+  ],
+
+  "2007": [
+    { "title": "Festl", "text": "", "img": "" }
+  ],
+
+  "2008": [
+    { "title": "Jugendball", "text": "Thema: Sweet Dreams", "img": "" },
+    { "title": "Festl", "text": "", "img": "" }
+  ],
+
+  "2009": [
+    { "title": "Jugendball", "text": "Thema: Movies", "img": "" },
+    { "title": "Festl", "text": "", "img": "" }
+  ],
+
+  "2010": [
+    { "title": "Jugendball", "text": "Thema: Music", "img": "" },
+    { "title": "Festl", "text": "", "img": "" }
+  ],
+
+  "2011": [
+    { "title": "Jugendball", "text": "Thema: Casino Royale & 10 Jahre Jugend", "img": "" },
+    { "title": "Festl", "text": "", "img": "" }
+  ],
+
+  "2012": [
+    { "title": "Jugendball", "text": "Thema: Under the Sea", "img": "" },
+    { "title": "Umbau", "text": "", "img": "" },
+    { "title": "Silvesterwanderung", "text": "", "img": "" },
+    { "title": "Gemeinnützigkeit", "text": "", "img": "" }
+  ],
+
+  "2013": [
+    { "title": "Jugendball", "text": "Thema: Wild, Wild West", "img": "" },
+    { "title": "Umbau", "text": "", "img": "" },
+    { "title": "Divers", "text": "", "img": "" }
+  ],
+
+  "2014": [
+    { "title": "Jugendball", "text": "Thema: Rock'n Blues", "img": "" },
+    { "title": "Umbau", "text": "", "img": "" },
+    { "title": "Maifest", "text": "", "img": "" },
+    { "title": "Maibaumstellen", "text": "", "img": "" }
+  ],
+
+  "2015": [
+    { "title": "Jugendball", "text": "Thema: Jungle", "img": "" },
+    { "title": "Maifest", "text": "", "img": "" },
+    { "title": "Umbau", "text": "", "img": "" },
+    { "title": "Christbaum", "text": "", "img": "" },
+    { "title": "Diverses", "text": "", "img": "" }
+  ],
+
+  "2016": [
+    { "title": "Jugendball", "text": "Thema: Frozen", "img": "" },
+    { "title": "Maifest", "text": "", "img": "" },
+    { "title": "Umbau", "text": "", "img": "" },
+    { "title": "Nikolo", "text": "", "img": "" },
+    { "title": "Diverses", "text": "", "img": "" }
+  ],
+
+  "2017": [
+    { "title": "Jugendball", "text": "Thema: Moulin Rouge", "img": "" },
+    { "title": "Diverses", "text": "", "img": "" },
+    { "title": "Trefferoeffnung", "text": "", "img": "" },
+    { "title": "Maifest", "text": "", "img": "" },
+    { "title": "Maibaum", "text": "", "img": "" },
+    { "title": "Snowattack", "text": "", "img": "" }
+  ],
+
+  "2018": [
+    { "title": "Jugendball", "text": "Thema: Wonderland", "img": "" },
+    { "title": "Maibaumstellen", "text": "", "img": "" },
+    { "title": "Snowattack", "text": "", "img": "" },
+    { "title": "Beachvolleyballturnier", "text": "", "img": "" },
+    { "title": "Maifest", "text": "", "img": "" }
+  ],
+
+  "2019": [
+    { "title": "Jugendball", "text": "Thema: Fire & Ice", "img": "" },
+    { "title": "Festl", "text": "", "img": "" }
+  ],
+
+  "2020": [
+    { "title": "Jugendball", "text": "Thema: Griechischer Olymp", "img": "" },
+    { "title": "Festl", "text": "", "img": "" }
+  ],
+
+  "2021": [
+    { "title": "Festl", "text": "", "img": "" }
+  ],
+
+  "2022": [
+    { "title": "Festl", "text": "", "img": "" }
+  ],
+
+  "2023": [
+    { "title": "Jugendball", "text": "Thema: Great Gatsby", "img": "" },
+    { "title": "Festl", "text": "", "img": "" }
+  ],
+
+  "2024": [
+    { "title": "Jugendball", "text": "Thema: Flower Power", "img": "" },
+    { "title": "Festl", "text": "", "img": "" }
+  ],
+
+  "2025": [
+    { "title": "Jugendball", "text": "Thema: Mamma Mia", "img": "" },
+    { "title": "Festl", "text": "", "img": "" }
+  ]
+
+
 
 };
 

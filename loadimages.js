@@ -2,7 +2,7 @@
 
 async function loadGallery(year, festType) {
     // Ersetze dies durch deine echte Web-App-URL von Google
-    const scriptUrl = 'https://script.google.com/macros/s/AKfycbyFps8R4HactMraUyzaAlvnbfCvT1aQN_8kJ7HMEReWtC4oQAZNlyoN56oG2BYc3NQo5g/exec';
+    const scriptUrl = 'https://script.google.com/macros/s/AKfycbxAchZxbTgGbNq1_1raZWmDGVqGZi2IEMbwb90m_OZSxeZf2NJSpJRJVBy7RlckxANDVw/exec';
     const galleryContainer = document.getElementById('gallery-container');
     
     // Prüfen, ob der Container auf der aktuellen Seite existiert
