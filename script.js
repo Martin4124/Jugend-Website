@@ -4,29 +4,28 @@
 const eventDatabase = {
     // Ära 1: Retro (bis 2007)
   "2001": [
-    { "title": "Jugendball", "text": "Thema: Adam & Eva", "img": "" },
-    { "title": "s'Festl", "text": "Das erste organisierte Fest", "img": "" }
+    { "title": "Jugendball", "text": "Thema: Adam & Eva", "img": "https://drive.google.com/thumbnail?id=1jB-zC9m40wb25wr3lZM83TU_n2ETlNfX&sz=s1200" },
+    { "title": "s'Festl", "text": "Das erste organisierte Fest", "img": "https://drive.google.com/thumbnail?id=1VsPbSHy-w6ojY0UU_plMrxkyeTY_DtmA&sz=s1200" }
   ],
 
   "2002": [
-    { "title": "Jugendball", "text": "Thema: Eine Welt", "img": "" }
+    { "title": "Jugendball", "text": "Thema: Eine Welt", "img": "https://drive.google.com/thumbnail?id=1YfIfB420p3kpr6VHbjSD-1zAAvE-OmKR&sz=s1200" }
   ],
 
   "2003": [
-    { "title": "Jugendball", "text": "Thema: Mythen und Legenden", "img": "" },
+    { "title": "Jugendball", "text": "Thema: Mythen und Legenden", "img": "https://drive.google.com/thumbnail?id=1sJ6glmlJ3dGLQCGP2lcVp9b7i4fiHWxe&sz=s1200" },
     { "title": "Festl", "text": "", "img": "" }
   ],
 
   "2004": [
-    { "title": "Jugendball", "text": "Thema: Himmel & Hölle", "img": "" },
-    { "title": "Maifest", "text": "Das legendäre Maifest", "img": "" },
-    { "title": "Seifenkistenrennen", "text": "", "img": "" },
-    { "title": "Festl", "text": "", "img": "" }
+    { "title": "Jugendball", "text": "Thema: Himmel & Hölle", "img": "https://drive.google.com/thumbnail?id=1Y7Z-DCt1q9tjRHBhdF2YtxkIA3YNoNdz&sz=s1200" },
+    { "title": "Maifest", "text": "Das legendäre Maifest", "img": "https://drive.google.com/thumbnail?id=1pIM2xz5vOTRRP2J8b1nh_WTV-_b47uvm&sz=s1200" },
+    { "title": "Seifenkistenrennen", "text": "", "img": "" }
   ],
 
   "2005": [
-    { "title": "Jugendball", "text": "Thema: Märchen", "img": "" },
-    { "title": "Schneebar", "text": "", "img": "" },
+    { "title": "Jugendball", "text": "Thema: Märchen", "img": "https://drive.google.com/thumbnail?id=13QKJWJrlvYA1p5e6Qr10gagC_RqRFOGd&sz=s1200" },
+    { "title": "Schneebar", "text": "", "img": "https://drive.google.com/thumbnail?id=1DngwUVnAiK4rwJKEEQ02fAFva3TLrWq3&sz=s1200" },
     { "title": "Seifenkistenrennen", "text": "", "img": "" }
   ],
 
