@@ -97,33 +97,135 @@ body.style-neon .logo-2006 { display: none}
 /* ============================================================
    3. STYLE: MID / CHROME Y2K 
    ============================================================ */
-body.style-mid { background-color: #0a1525; color: #e0e0e0; font-family: 'Orbitron', sans-serif; --chrome-blue: #0070ff; }
+/* ============================================================
+   3. STYLE: MID / CHROME Y2K 
+   ============================================================ */
+body.style-mid { 
+    background-color: #0a1525; 
+    color: #e0e0e0; 
+    font-family: 'Orbitron', sans-serif; 
+    --chrome-blue: #0070ff; 
+}
+
 body.style-mid .bg-chrome-waves {
     display: block;
-    background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, transparent 50%, rgba(0,0,0,0.8) 100%), repeating-linear-gradient(90deg, #0a1525, #1c2e4a 50px, #0a1525 100px);
+    background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, transparent 50%, rgba(0,0,0,0.8) 100%), 
+                repeating-linear-gradient(90deg, #0a1525, #1c2e4a 50px, #0a1525 100px);
 }
-body.style-mid .bg-chrome-waves::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: repeating-linear-gradient(transparent 0px, transparent 2px, rgba(0,0,0,0.4) 3px); pointer-events: none; opacity: 0.5; }
+
+body.style-mid #cockpit { 
+    background: linear-gradient(to bottom, #333, #111); 
+    border: 2px solid #555; 
+    border-top: 2px solid #999; 
+    box-shadow: 0 5px 20px rgba(0, 112, 255, 0.3); 
+}
+
+body.style-mid .main-header { 
+    background: linear-gradient(to bottom, #1c2e4a, #0a1525); 
+    border-bottom: 3px solid var(--chrome-blue); 
+    padding: 20px 10px; /* Padding reduziert für Mobile */
+    margin-bottom: 20px; 
+    width: 100%;
+}
+
+body.style-mid .logo-text {
+    font-family: 'Orbitron', sans-serif; 
+    font-weight: 900; 
+    color: #fff; 
+    font-size: clamp(1.5rem, 8vw, 3rem); /* Dynamische Größe */
+    letter-spacing: 2px; /* Reduziert für bessere Lesbarkeit */
+    background: linear-gradient(to bottom, #fff 0%, #aaa 50%, #fff 100%); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    filter: drop-shadow(0 0 5px var(--chrome-blue));
+    word-break: break-word;
+}
+
+body.style-mid .main-nav { 
+    margin-top: 20px; 
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+    flex-wrap: wrap; /* Wichtig für Mobile! */
+}
+
+body.style-mid .main-nav a { 
+    background: linear-gradient(to bottom, #ddd, #999); 
+    color: #0a1525; 
+    padding: 8px 15px; 
+    text-decoration: none; 
+    font-weight: 900; 
+    font-size: 0.8rem; 
+    text-transform: uppercase; 
+    border: 2px solid #0a1525; 
+    transform: skewX(-10deg); /* Skew leicht reduziert */
+}
+body.style-mid .main-nav a:hover { background: var(--chrome-blue); color: #fff; box-shadow: 0 0 15px var(--chrome-blue); border-color: #fff; }
+
+
+body.style-mid .photo-grid { 
+    display: grid; /* Grid statt Flex für bessere Kontrolle */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px; 
+    padding: 15px;
+    width: 100%;
+}
+
+body.style-mid .card { 
+    width: 100%; /* Nutzt den Platz im Grid-Slot voll aus */
+    background: #0f1f3d; 
+    border: 2px solid var(--chrome-blue); 
+    padding: 10px; 
+    box-shadow: 0 0 10px rgba(0, 112, 255, 0.1); 
+    margin: 0 auto;
+}
+
 body.style-mid #year-display { color: var(--chrome-blue); font-family: 'Orbitron', sans-serif; text-shadow: 0 0 15px var(--chrome-blue); }
+ body.style-mid { background-color: #0a1525; color: #e0e0e0; font-family: 'Orbitron', sans-serif; --chrome-blue: #0070ff; }
+
+body.style-mid .bg-chrome-waves {
+
+    display: block;
+
+    background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, transparent 50%, rgba(0,0,0,0.8) 100%), repeating-linear-gradient(90deg, #0a1525, #1c2e4a 50px, #0a1525 100px);
+
+}
+
+/*body.style-mid .bg-chrome-waves::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: repeating-linear-gradient(transparent 0px, transparent 2px, rgba(0,0,0,0.4) 3px); pointer-events: none; opacity: 0.5; }
+
 body.style-mid #cockpit { background: linear-gradient(to bottom, #333, #111); border: 2px solid #555; border-top: 2px solid #999; box-shadow: 0 5px 20px rgba(0, 112, 255, 0.3); }
+
 body.style-mid input[type=range]::-webkit-slider-thumb { background: #fff; border: 2px solid var(--chrome-blue); box-shadow: 0 0 10px var(--chrome-blue); }
 
+
 body.style-mid .container { max-width: 960px; margin: 30px auto; padding: 20px; text-align: center; }
+
 body.style-mid .main-header { background: linear-gradient(to bottom, #1c2e4a, #0a1525); border-bottom: 3px solid var(--chrome-blue); padding: 20px; margin-bottom: 40px; box-shadow: 0 5px 15px rgba(0, 112, 255, 0.2); }
+
 body.style-mid .logo-text {
+
     font-family: 'Orbitron', sans-serif; font-weight: 900; color: #fff; font-size: 3rem; letter-spacing: 5px;
+
     background: linear-gradient(to bottom, #fff 0%, #aaa 50%, #fff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 5px var(--chrome-blue));
+
 }
+
 body.style-mid .status-badge { display: none; }
+
 body.style-mid .main-nav { margin-top: 20px; display: flex; justify-content: center; gap: 10px; }
+
 body.style-mid .main-nav a { background: linear-gradient(to bottom, #ddd, #999); color: #0a1525; padding: 10px 25px; text-decoration: none; font-weight: 900; font-size: 0.9rem; text-transform: uppercase; border: 2px solid #0a1525; transform: skewX(-15deg); box-shadow: inset 0 0 5px rgba(0,0,0,0.5); }
-body.style-mid .main-nav a:hover { background: var(--chrome-blue); color: #fff; box-shadow: 0 0 15px var(--chrome-blue); border-color: #fff; }
+
 body.style-mid #era-title { color: var(--chrome-blue); font-family: 'Orbitron'; letter-spacing: 2px; margin-bottom: 20px; }
+
 body.style-mid .photo-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+
 body.style-mid .card { width: 45%; background: #0f1f3d; border: 2px solid var(--chrome-blue); padding: 5px; box-shadow: 0 0 10px rgba(0, 112, 255, 0.1); }
+
 body.style-mid .card img { margin-bottom: 10px; border: 1px solid #555; }
-body.style-mid .card-txt h3 { color: var(--chrome-blue); font-family: 'Orbitron'; font-size: 1.2rem; text-transform: uppercase; }
 
-
+body.style-mid .card-txt h3 { color: var(--chrome-blue); font-family: 'Orbitron'; font-size: 1.2rem; text-transform: uppercase; } 
+*/
 /* ============================================================
    4. STYLE: 2006 - 2010 (Der dunkle "Maifest" Look)
    ============================================================ */
@@ -170,15 +272,15 @@ body.style-2006 #year-display { color: #7a0000; }
    5. STYLE: RETRO (2001 - 2005)
    ============================================================ */
 body.style-retro {
-    background-color: #333; color: #ccc; font-family: 'Bradley Hand ITC', sans-serif;
+    background-color: #333; color: #ccc; font-family: 'Bradley Hand ITC', 'Patrick Hand';
     background-image: repeating-linear-gradient(45deg, #2a2a2a 0, #2a2a2a 1px, transparent 0, transparent 50%); background-size: 6px 6px;
 }
-body.style-retro #year-display { color: #ff6600; font-family: 'Bradley Hand ITC', sans-serif; letter-spacing: 0; }
+body.style-retro #year-display { color: #ff6600; font-family: 'Bradley Hand ITC', 'Patrick Hand'; letter-spacing: 0; }
 body.style-retro #cockpit { background: #222; border: 1px solid #ff6600; border-radius: 0; box-shadow: none; }
 body.style-retro input[type=range]::-webkit-slider-thumb { background: #ff6600; border-radius: 0; border: none; }
 body.style-retro .container { width: 780px; margin: 0 auto; background: #222; border-left: 2px solid #555; border-right: 2px solid #555; min-height: 100vh; padding: 0; }
 body.style-retro .main-header { background: #000; border-bottom: 4px solid #ff6600; padding: 15px; text-align: left; }
-body.style-retro .logo-text { font-family: 'Bradley Hand ITC', sans-serif; color: #ff6600; font-size: 2rem; margin: 0; }
+body.style-retro .logo-text { font-family: 'Bradley Hand ITC', 'Patrick Hand'; color: #ff6600; font-size: 2rem; margin: 0; }
 body.style-retro .status-badge { display: none; }
 body.style-retro .main-nav { background: #444; padding: 5px; border-top: 1px solid #666; margin-top: 10px; text-align: center; }
 body.style-retro .main-nav a { color: #fff; text-decoration: none; font-size: 14px; padding: 0 15px; border-right: 1px solid #777; text-transform: uppercase; font-weight: normal; letter-spacing: 0; }
@@ -332,8 +434,34 @@ body.style-retro .card img { width: 120px; height: 120px; object-fit: cover; fle
     body.style-neon .card { width: 100%; }
 
     /* Mobile: Mid */
-    body.style-mid .logo-text { font-size: 1.8rem; letter-spacing: 2px; }
-    body.style-mid .card { width: 100%; }
+   /* Mobile: Mid / Chrome Style Fix */
+    body.style-mid .main-header {
+        padding: 15px 5px;
+    }
+    body.style-mid .logo-text {
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+        line-height: 1.2;
+    }
+    body.style-mid .main-nav {
+        gap: 5px;
+    }
+    body.style-mid .main-nav a {
+        transform: none; /* Skew auf Handy entfernen, spart Platz */
+        font-size: 0.75rem;
+        padding: 6px 10px;
+        flex: 1 1 40%; /* Buttons nehmen mehr Platz ein */
+        text-align: center;
+    }
+    body.style-mid .photo-grid {
+        grid-template-columns: 1fr; /* Nur eine Spalte auf schmalen Handys */
+        gap: 15px;
+        padding: 10px;
+    }
+    body.style-mid .card {
+        width: 100%;
+        max-width: 400px;
+    }
 
     /* Mobile: Retro */
     body.style-retro .container { width: 100%; border: none; }
