@@ -1,0 +1,190 @@
+/* ============================================================
+   HIMMEL GALLERY - 2013 BLUE RECONSTRUCTION
+   ============================================================ */
+
+:root {
+    --himmel-blue: #9dbcd4;       /* Hellblauer Hintergrund */
+    --himmel-nav: #73a1c6;        /* Blau der Navigationsleiste */
+    --himmel-text: #1f5d92;       /* Dunkelblau für Text */
+    --himmel-content: #e6f0f7;    /* Ganz helles Blau für Inhaltsbereich */
+}
+
+body.style-himmel {
+    background-color: var(--himmel-blue);
+    color: var(--himmel-text);
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Header & Logo */
+.style-himmel .main-header {
+    background-color: #fff;
+    border-bottom: none;
+}
+
+
+
+/* --- OPTIMIERTER HEADER FÜR HIMMEL THEME --- */
+.style-himmel .logo-wrapper {
+    background-color: #fff;
+    /* Wir erzwingen die Block-Eigenschaft und die Zentrierung */
+    display: block !important; 
+    width: 70% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    
+    padding: 0;
+    overflow: hidden; /* Verhindert, dass das Bild übersteht */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.style-himmel .logo-himmel {
+    /* WICHTIG: Das Bild muss 100% des Wrappers (also der 70%) einnehmen */
+    width: 100% !important; 
+    height: auto !important;
+    display: block !important;
+    
+    /* Begrenzung, damit es bei Riesen-Monitoren nicht pixelig wird */
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+/* Navigation (Blaue Leiste ohne Schräge) */
+.style-himmel .main-nav {
+    background-color: var(--himmel-nav);
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+.style-himmel .main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 20px;
+    background: transparent;
+    border: none;
+    transform: none; /* Keine Schräge im 2013er Style */
+}
+
+.style-himmel .main-nav a:hover {
+    background-color: #5b8bb5;
+}
+
+/* Inhaltsbereich */
+.style-himmel .container {
+    background-color: var(--himmel-content);
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding-top: 20px;
+}
+
+.style-himmel #era-title {
+    font-family: Arial, sans-serif;
+    color: var(--himmel-text);
+    text-align: left;
+    padding: 0 20px;
+    font-size: 2rem;
+}
+
+/* --- GOOGLE PHOTOS GRID LOGIK --- */
+.style-himmel .photo-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 12px;
+    padding: 20px;
+}
+
+.style-himmel .justified-item, .style-himmel .card {
+    flex: 1 1 auto !important; /* Proportionales Wachstum */
+    height: 300px !important;    /* Feste Zeilenhöhe */
+    width: auto !important;      /* Breite wird vom Bild bestimmt */
+    background: #fff;
+    border: 1px solid #acc6d9;
+    position: relative;
+    overflow: hidden;
+}
+
+.style-himmel .justified-item img, .style-himmel .card img {
+    height: 100% !important;
+    width: auto !important;
+    min-width: 100%;
+    object-fit: cover;           /* Verhindert Verzerrung */
+    display: block;
+    filter: grayscale(100%);     /* Startet Schwarz-Weiß (dein Wunsch-Effekt) */
+    transition: 0.5s ease;
+}
+
+.style-himmel .justified-item:hover img, .style-himmel .card:hover img {
+    filter: grayscale(0%);       /* Farbe bei Hover */
+    transform: scale(1.05);
+}
+
+/* Text auf den Bildern */
+.style-himmel .card-txt {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-top: 1px solid #acc6d9;
+}
+
+.style-himmel .card-txt h3 {
+    color: var(--himmel-text);
+    font-size: 0.9rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* Letzte Reihe Fix */
+.style-himmel .photo-grid::after {
+    content: '';
+    flex-grow: 999 !important;
+}
+@media (max-width: 768px) {
+    /* Logo nutzt auf dem Handy den vollen Platz */
+    .style-himmel .logo-wrapper {
+        width: 100% !important; 
+        box-shadow: none; /* Flacherer Look für Mobile */
+    }
+
+    /* Navigation wird kompakter */
+    .style-himmel .main-nav {
+        flex-wrap: wrap; /* Buttons brechen um, wenn Platz fehlt */
+    }
+    
+    .style-himmel .main-nav a {
+        padding: 8px 12px;
+        font-size: 12px;
+        flex: 1 1 40%; /* Jeweils zwei Buttons nebeneinander */
+        text-align: center;
+        border: 0.5px solid rgba(255,255,255,0.3);
+    }
+
+    /* Galerie-Anpassung für kleine Screens */
+    .style-himmel .photo-grid {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .style-himmel .justified-item, 
+    .style-himmel .card {
+        height: 180px !important; /* Kürzere Zeilen für bessere Übersicht am Handy */
+    }
+
+    /* Titel auf Bildern am Handy kleiner machen */
+    .style-himmel .card-txt h3 {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+}
+
+/* --- 3. SPEZIAL-FIX FÜR SEHR KLEINE HANDYS --- */
+@media (max-width: 480px) {
+    .style-himmel .justified-item, 
+    .style-himmel .card {
+        height: 150px !important; /* Noch kompakter für Mini-Displays */
+    }
+}

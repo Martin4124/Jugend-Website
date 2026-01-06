@@ -68,7 +68,7 @@ body.style-sunset .card-txt h3 { font-family: 'Anton', sans-serif; font-size: 1.
 /* ============================================================
    2. STYLE: NEON / CLUB (2013 - 2020)
    ============================================================ */
-body.style-neon {
+/*body.style-neon {
     background-color: #0a0010; color: #ddd; font-family: 'Montserrat', sans-serif; font-weight: 900;
     --neon-purple: #bd00e3; --neon-green: #b3e000;
 }
@@ -93,7 +93,7 @@ body.style-neon .card img { border-bottom: 2px solid var(--neon-purple); mix-ble
 body.style-neon .card:hover img { filter: brightness(1); }
 body.style-neon .card-txt h3 { color: var(--neon-green); font-family: 'Anton', sans-serif; letter-spacing: 1px; margin: 10px 0; text-transform: uppercase; }
 body.style-neon .logo-2006 { display: none}
-
+*/
 /* ============================================================
    3. STYLE: MID / CHROME Y2K 
    ============================================================ */
@@ -170,25 +170,125 @@ body.style-2006 #year-display { color: #7a0000; }
    5. STYLE: RETRO (2001 - 2005)
    ============================================================ */
 body.style-retro {
-    background-color: #333; color: #ccc; font-family: 'Verdana', sans-serif;
+    background-color: #333; color: #ccc; font-family: 'Bradley Hand ITC', sans-serif;
     background-image: repeating-linear-gradient(45deg, #2a2a2a 0, #2a2a2a 1px, transparent 0, transparent 50%); background-size: 6px 6px;
 }
-body.style-retro #year-display { color: #ff6600; font-family: 'Verdana', sans-serif; letter-spacing: 0; }
+body.style-retro #year-display { color: #ff6600; font-family: 'Bradley Hand ITC', sans-serif; letter-spacing: 0; }
 body.style-retro #cockpit { background: #222; border: 1px solid #ff6600; border-radius: 0; box-shadow: none; }
 body.style-retro input[type=range]::-webkit-slider-thumb { background: #ff6600; border-radius: 0; border: none; }
 body.style-retro .container { width: 780px; margin: 0 auto; background: #222; border-left: 2px solid #555; border-right: 2px solid #555; min-height: 100vh; padding: 0; }
 body.style-retro .main-header { background: #000; border-bottom: 4px solid #ff6600; padding: 15px; text-align: left; }
-body.style-retro .logo-text { font-family: 'Arial Black', sans-serif; color: #ff6600; font-size: 1.5rem; margin: 0; }
+body.style-retro .logo-text { font-family: 'Bradley Hand ITC', sans-serif; color: #ff6600; font-size: 2rem; margin: 0; }
 body.style-retro .status-badge { display: none; }
 body.style-retro .main-nav { background: #444; padding: 5px; border-top: 1px solid #666; margin-top: 10px; text-align: center; }
-body.style-retro .main-nav a { color: #fff; text-decoration: none; font-size: 11px; padding: 0 15px; border-right: 1px solid #777; text-transform: uppercase; font-weight: normal; letter-spacing: 0; }
-body.style-retro #era-title { font-size: 12px; color: #ff6600; text-decoration: underline; background: #111; padding: 5px; margin: 10px; border: 1px solid #444; }
+body.style-retro .main-nav a { color: #fff; text-decoration: none; font-size: 14px; padding: 0 15px; border-right: 1px solid #777; text-transform: uppercase; font-weight: normal; letter-spacing: 0; }
+body.style-retro #era-title { font-size: 15px; color: #ff6600; text-decoration: underline; background: #111; padding: 5px; margin: 10px; border: 1px solid #444; }
 body.style-retro .photo-grid { display: block; padding: 10px; }
 body.style-retro .card { display: flex; background: #1a1a1a; border: 1px solid #555; margin-bottom: 10px; padding: 5px; align-items: center; }
 body.style-retro .card img { width: 120px; height: 90px; border: 2px solid #ff6600; margin-right: 10px; object-fit: cover; }
-body.style-retro .card-txt h3 { font-size: 12px; color: #ff6600; text-decoration: underline; font-family: 'Verdana'; margin-bottom: 5px; }
-body.style-retro .card-txt p { font-size: 10px; }
+body.style-retro .card-txt h3 { font-size: 15px; color: #ff6600; text-decoration: underline; font-family: 'Bradley Hand ITC'; margin-bottom: 5px; }
+body.style-retro .card-txt p { font-size: 13px; }
 
+
+/* ============================================================
+   2. STYLE: HIMMEL (2013 - 2020) - HELLBLAU RECONSTRUCTION
+   ============================================================ */
+body.style-himmel {
+    background-color: #9dbcd4; /* Das Hellblau aus deinem Screenshot */
+    color: #1f5d92;           /* Dunkelblau für den Text */
+    font-family: Arial, sans-serif;
+}
+
+/* Hintergrund-Ebene für Himmel */
+body.style-himmel .bg-neon-beams {
+    display: block;
+    background: #9dbcd4; /* Kein Muster, nur solid hellblau wie im Bild */
+}
+
+/* Cockpit Anpassung für Himmel */
+body.style-himmel #cockpit {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #73a1c6;
+    color: #1f5d92;
+}
+body.style-himmel #year-display { color: #1f5d92; font-family: Arial, sans-serif; text-shadow: none; }
+body.style-himmel input[type=range]::-webkit-slider-runnable-track { background: #73a1c6; }
+body.style-himmel input[type=range]::-webkit-slider-thumb { background: #1f5d92; }
+
+/* Header & Banner */
+body.style-himmel .main-header { 
+    background-color: #fff; 
+    padding: 0; 
+    border-bottom: none; 
+}
+body.style-himmel .logo-wrapper { 
+    border: none; 
+    padding: 0; 
+    transform: none; 
+    margin: 0; 
+    display: block;
+}
+body.style-himmel .logo-himmel { 
+    display: block; 
+    width: 100%; 
+    max-width: 100%; 
+    height: auto; 
+}
+/* Text & Badge im Himmel-Theme ausblenden, da das Banner alles zeigt */
+body.style-himmel .logo-text, body.style-himmel .status-badge { display: none; }
+
+/* Navigation (Blaue Leiste wie im Bild) */
+body.style-himmel .main-nav {
+    background-color: #73a1c6;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    margin: 0;
+}
+body.style-himmel .main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 15px;
+    font-family: Arial, sans-serif;
+    text-transform: none;
+    background: transparent;
+    border: none;
+    transform: none;
+    box-shadow: none;
+}
+body.style-himmel .main-nav a:hover { background-color: #5b8bb5; color: #fff; }
+
+/* Inhaltsbereich (Hellblaues Center) */
+body.style-himmel .container {
+    background-color: #e6f0f7;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Info Bar & Galerie */
+body.style-himmel .info-bar { background: transparent; padding: 20px; }
+body.style-himmel #era-title { color: #1f5d92; font-family: Arial, sans-serif; font-size: 1.8rem; text-align: left; }
+
+body.style-himmel .photo-grid { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 15px; 
+    padding: 20px; 
+    justify-content: flex-start;
+}
+body.style-himmel .card {
+    background: #fff;
+    border: 1px solid #acc6d9;
+    box-shadow: none;
+    transform: none;
+    width: 250px;
+}
+body.style-himmel .card:hover { border-color: #1f5d92; }
+body.style-himmel .card img { filter: none; border-bottom: 1px solid #acc6d9; }
+body.style-himmel .card-txt h3 { color: #1f5d92; font-family: Arial, sans-serif; font-size: 14px; }
 
 /* =========================================
    COMMON & HELPER

@@ -3,7 +3,7 @@
 // ==========================================
 const eventDatabase = {
     // Ära 1: Retro (bis 2007)
-    "2001":[{title:"Jugendball",text:"Thema: Adam & Eva",img:"",link:"2001gallery.html?year=2001&fest=jugendball"},{title:"s'Festl",text:"Das erste organisierte Fest",img:"",link:"2001/sFestl2001.html"}],
+    "2001":[{title:"Jugendball",text:"Thema: Adam & Eva",img:"",link:""},{title:"s'Festl",text:"Das erste organisierte Fest",img:"",link:""}],
     "2002":[{title:"Jugendball",text:"Thema: Eine Welt",img:"https://drive.google.com/thumbnail?id=1gogTIC9YMdMMWtVCguxaad7JwMw72Xvt&sz=w1000",link:"2002/Jugendball2002.html"}],
     "2003":[{title:"Jugendball",text:"Thema: Mythen und Legenden",img:"",link:"2003/Jugendball2003.html"}],
     "2004":[{title:"Jugendball",text:"Thema: Himmel & Hölle",img:"",link:"2004/Jugendball2004.html"},{title:"Maifest",text:"Das legendäre Maifest",img:""},{title:"Seifenkistenrennen",text:"",img:""}],
@@ -71,8 +71,8 @@ function updateTimeline(year) {
         newStyle = 'style-mid';
         titleText = '';
     } 
-    else if (year >= 2015 && year <= 2020) {
-        newStyle = 'style-neon';
+    else if (year >= 2015 && year <= 2018) {
+        newStyle = 'style-himmel';
         titleText = '';
     } 
     else {
@@ -118,12 +118,12 @@ function renderContent(year) {
     gallery.innerHTML = html;
 }
 
-function renderContent(year) {
+async function renderContent(year) {
     let html = '';
     
     if (eventDatabase[year]) {
-        eventDatabase[year].forEach(event => {
-            const imgSrc = event.img ? event.img : `https://picsum.photos/400/300?random=${Math.random()}`;
+        for (const event of eventDatabase[year]) {
+            const imgSrc = event.img;
 
             const festSafe = event.title.toLowerCase().replace(/[^a-z0-9]/g, '');
             // Muss die Jahr logik noch einfügen
@@ -158,7 +158,7 @@ function renderContent(year) {
                     </div>
                 </article>
             `;
-        });
+        };
     } else {
         html = `<div style="width: 100%; text-align: center; padding: 40px; opacity: 0.6;">
                     <p>Keine Einträge für das Jahr ${year} gefunden.</p>

@@ -41,3 +41,23 @@ async function loadGallery(year, festType) {
         galleryContainer.innerHTML = "<p style='color:white;'>Fehler beim Laden der Galerie.</p>";
     }
 }
+
+async function loadFirstImageOnly(year, festType) {
+    const scriptUrl = 'https://script.google.com/macros/s/AKfycbyFps8R4HactMraUyzaAlvnbfCvT1aQN_8kJ7HMEReWtC4oQAZNlyoN56oG2BYc3NQo5g/exec';
+    
+    try {
+        const response = await fetch(`${scriptUrl}?year=${year}&fest=${festType}`);
+        const images = await response.json();
+
+        // Prüfen, ob Bilder vorhanden sind
+        if (images && images.length > 0 && !images.error) {
+            const img = images[0]; // Nur das erste Bild nehmen
+            
+            return img.url;
+        } else {
+            return `https://picsum.photos/400/300?random=${Math.random()}`;
+        }
+    } catch (err) {
+        console.error("Fehler beim Laden des Titelbildes:", err);
+    }
+}

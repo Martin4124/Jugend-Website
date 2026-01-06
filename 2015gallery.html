@@ -3,31 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JUV HOF | ARCHIVE</title>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
+    <title>JUV HOF | ARCHIV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="sunset-gallery.css">
+    <link rel="stylesheet" href="himmel-gallery.css">
 </head>
-<body class="style-sunset">
+<body class="style-himmel">
 
-    <div class="bg-sunset-glow"></div>
-
-    <header class="container">
+    <header class="main-header">
         <div class="logo-wrapper">
-            <div class="logo-text">JUGEND HOF</div>
-            <div class="status-badge">ONLINE</div>
+            <img src="juvlogo.jpg" alt="JUGEND HOF Banner" class="logo-himmel">
         </div>
         
         <nav class="main-nav">
-            <a href="index.html"><span>HOME</span></a>
-            <a href="#"><span>CHRONIK</span></a>
-            <a href="#"><span>VORSTAND</span></a>
-            <a href="#"><span>ZEITLEISTE</span></a>
+            <a href="index.html"><span>Home</span></a>
+            <a href="#"><span>Chronik</span></a>
+            <a href="#"><span>Vorstand</span></a>
+            <a href="#"><span>Zeitleiste</span></a>
         </nav>
     </header>
 
     <main class="container">
-        <h2 id="year-display">ARCHIV // <span id="event-name">LÄDT...</span></h2>
+        <section class="info-bar">
+            <h2 id="era-title">ARCHIV // <span id="event-name">LÄDT...</span></h2>
+        </section>
 
         <div id="gallery-container" class="photo-grid"></div>
     </main>
@@ -36,7 +35,7 @@
     <script>
         window.onload = function() {
             const params = new URLSearchParams(window.location.search);
-            const year = params.get('year') || '2024';
+            const year = params.get('year') || '2013';
             const fest = params.get('fest') || 'EVENT';
 
             document.getElementById('event-name').innerText = `${fest.toUpperCase()} ${year}`;
