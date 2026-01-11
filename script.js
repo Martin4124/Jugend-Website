@@ -41,7 +41,7 @@ const eventDatabase = {
 
   "2008": [
     { "title": "Jugendball", "text": "Thema: Sweet Dreams", "img": "https://drive.google.com/thumbnail?id=1pmYWQYLxGPhgwqJan58BFPbvPghU_eIM&sz=s1200" },
-    { "title": "Festl", "text": "", "img": "" }
+    { "title": "Festl", "text": "", "img": "https://drive.google.com/thumbnail?id=123Tcbg1cFzuUTkNvawDYpy2LiyEcGrXe&sz=s1200" }
   ],
 
   "2009": [
@@ -75,13 +75,13 @@ const eventDatabase = {
   "2014": [
     { "title": "Jugendball", "text": "Thema: Rock'n Blues", "img": "" },
     { "title": "Umbau", "text": "", "img": "https://drive.google.com/thumbnail?id=1TRt7bVllFICsW3y2K5Suw-iT_7lA1nAh&sz=s1200" },
-    { "title": "Maifest", "text": "", "img": "" },
+    { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1N_bWhtA1dLIeFFIz6ZVUx1wR9Xk7_x0E&sz=s1200" },
     { "title": "Maibaumstellen", "text": "", "img": "" }
   ],
 
   "2015": [
     { "title": "Jugendball", "text": "Thema: Jungle", "img": "" },
-    { "title": "Maifest", "text": "", "img": "" },
+    { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1N_bWhtA1dLIeFFIz6ZVUx1wR9Xk7_x0E&sz=s1200" },
     { "title": "Umbau", "text": "", "img": "https://drive.google.com/thumbnail?id=1TRt7bVllFICsW3y2K5Suw-iT_7lA1nAh&sz=s1200" },
     { "title": "Christbaum", "text": "", "img": "" },
     { "title": "Diverses", "text": "", "img": "" }
@@ -89,7 +89,7 @@ const eventDatabase = {
 
   "2016": [
     { "title": "Jugendball", "text": "Thema: Frozen", "img": "" },
-    { "title": "Maifest", "text": "", "img": "" },
+    { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1N_bWhtA1dLIeFFIz6ZVUx1wR9Xk7_x0E&sz=s1200" },
     { "title": "Umbau", "text": "", "img": "https://drive.google.com/thumbnail?id=1TRt7bVllFICsW3y2K5Suw-iT_7lA1nAh&sz=s1200" },
     { "title": "Nikolo", "text": "", "img": "https://drive.google.com/thumbnail?id=1dBhrVAqvAPjTruloPHpOV-OWff2GJnAt&sz=s1200" },
     { "title": "Diverses", "text": "", "img": "" }
@@ -99,7 +99,7 @@ const eventDatabase = {
     { "title": "Jugendball", "text": "Thema: Moulin Rouge", "img": "https://drive.google.com/thumbnail?id=123Tcbg1cFzuUTkNvawDYpy2LiyEcGrXe&sz=s1200" },
     { "title": "Diverses", "text": "", "img": "" },
     { "title": "Trefferoeffnung", "text": "", "img": "" },
-    { "title": "Maifest", "text": "", "img": "" },
+    { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1N_bWhtA1dLIeFFIz6ZVUx1wR9Xk7_x0E&sz=s1200" },
     { "title": "Maibaum", "text": "", "img": "" },
     { "title": "Snowattack", "text": "", "img": "https://drive.google.com/thumbnail?id=1xwyvvcZYwv98-7ADH0sBsE1fIzOVv4Cs&sz=s1200" }
   ],
@@ -109,7 +109,7 @@ const eventDatabase = {
     { "title": "Maibaumstellen", "text": "", "img": "" },
     { "title": "Snowattack", "text": "", "img": "https://drive.google.com/thumbnail?id=1iUj-CiltuW2XwYPKD1KCN3XOv6zVcthT&sz=s1200" },
     { "title": "Beachvolleyballturnier", "text": "", "img": "" },
-    { "title": "Maifest", "text": "", "img": "" }
+    { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1N_bWhtA1dLIeFFIz6ZVUx1wR9Xk7_x0E&sz=s1200" }
   ],
 
   "2019": [

@@ -59,7 +59,11 @@ body.style-sunset .main-nav a:hover { background: var(--acc-primary); border-col
 body.style-sunset .photo-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px; }
 body.style-sunset .card { width: 300px; background: #000; border: 1px solid #333; position: relative; transform: skewX(-2deg); transition: 0.3s; }
 body.style-sunset .card:hover { transform: skewX(-2deg) translateY(-5px); border-color: var(--acc-primary); box-shadow: 0 10px 30px rgba(255,72,0,0.3); }
-body.style-sunset .card img { filter: grayscale(100%); transition: 0.5s; }
+body.style-sunset .card img { width: 100% !important;        /* Bild füllt die Karte horizontal */
+    height: auto !important;       /* Höhe proportional, keine Verzerrung */
+    object-fit: cover !important;  /* behält den stilvollen Crop-Look */
+    border: 2px solid #ff4800 !important; /* leuchtender Sunset-Rahmen */
+    display: block !important;     /* kein flex-shrink, volle Kontrolle */ }
 body.style-sunset .card:hover img { filter: grayscale(0%); }
 body.style-sunset .card-txt { position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(to top, #000, transparent); padding: 20px; text-align: left; }
 body.style-sunset .card-txt h3 { font-family: 'Anton', sans-serif; font-size: 1.5rem; text-transform: uppercase; color: #fff; }
@@ -260,10 +264,18 @@ body.style-2006 .main-nav a:hover { background-color: #7a0000; }
 body.style-2006 .info-bar { background: linear-gradient(to bottom, #444, #111); border: 1px solid #555; margin: 20px auto; padding: 8px; max-width: 900px; }
 body.style-2006 #era-title { color: #fff; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; }
 
-body.style-2006 .photo-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px; }
+body.style-2006 .photo-grid { display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 20px !important;
+    justify-content: center !important;
+    align-items: flex-start !important; /* verhindert, dass kleine Karten gestreckt werden */ }
 body.style-2006 .card { width: 320px; background-color: #1a1a1a; border: 1px solid #333; transform: none; box-shadow: none; }
 body.style-2006 .card h3 { background: #333; padding: 6px 10px; font-size: 14px; color: #fff; border-bottom: 1px solid #444; }
-body.style-2006 .card img { filter: none; border-bottom: 1px solid #333; height: 200px; object-fit: cover; }
+body.style-2006 .card img { width: 100% !important;        /* Bild füllt die Karte horizontal */
+    height: auto !important;       /* Höhe automatisch, keine Verzerrung */
+    object-fit: cover !important;  /* behält den „Crop“-Look wie vorher */
+    border: 2px solid #7a0000 !important; /* roter Rahmen wie zuvor */
+    display: block !important;     /* kein flex-shrink oder Nebeneffekt */ }
 
 body.style-2006 #cockpit { border-color: #7a0000; }
 body.style-2006 #year-display { color: #7a0000; }
