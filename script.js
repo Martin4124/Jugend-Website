@@ -50,37 +50,38 @@ const eventDatabase = {
   ],
 
   "2010": [
-    { "title": "Jugendball", "text": "Thema: Music", "img": "" },
+    { "title": "Jugendball", "text": "Thema: Music", "img": "https://drive.google.com/thumbnail?id=1eWXOEuYzRGLhEFPztkqPibEGEkHrIlXK&sz=s1200" },
     { "title": "Festl", "text": "", "img": "" }
   ],
 
   "2011": [
-    { "title": "Jugendball", "text": "Thema: Casino Royale & 10 Jahre Jugend", "img": "" },
+    { "title": "Jugendball", "text": "Thema: Casino Royale & 10 Jahre Jugend", "img": "https://drive.google.com/thumbnail?id=1A-ErhdjB2LP8vHRbdQbL2InFUTtXQOve&sz=s1200" },
     { "title": "Festl", "text": "", "img": "" }
   ],
 
   "2012": [
-    { "title": "Jugendball", "text": "Thema: Under the Sea", "img": "" },
+    { "title": "Jugendball", "text": "Thema: Under the Sea", "img": "https://drive.google.com/thumbnail?id=1Ag_ybY3aRQJ-ZjL51WTpeuqSWc-qg6UB&sz=s1200" },
     { "title": "Umbau", "text": "", "img": "https://drive.google.com/thumbnail?id=1TRt7bVllFICsW3y2K5Suw-iT_7lA1nAh&sz=s1200" },
     { "title": "Silvesterwanderung", "text": "", "img": "" },
     { "title": "Gemeinnützigkeit", "text": "", "img": "" }
   ],
 
   "2013": [
-    { "title": "Jugendball", "text": "Thema: Wild, Wild West", "img": "" },
+    { "title": "Jugendball", "text": "Thema: Wild, Wild West", "img": "https://drive.google.com/thumbnail?id=18O-JOUfnIpWsp2uOrFdhsNc0emB1g7Dt&sz=s1200" },
     { "title": "Umbau", "text": "", "img": "https://drive.google.com/thumbnail?id=1TRt7bVllFICsW3y2K5Suw-iT_7lA1nAh&sz=s1200" },
-    { "title": "Divers", "text": "", "img": "" }
+    { "title": "Divers", "text": "", "img": "" },
+    {"title": "Tag der offenen Baustelle", "text": "", "img": "https://drive.google.com/thumbnail?id=11SCDea5tFrSQXvKcPmPx6MLCOP1eai5D&sz=s1200"}
   ],
 
   "2014": [
     { "title": "Jugendball", "text": "Thema: Rock'n Blues", "img": "" },
     { "title": "Umbau", "text": "", "img": "https://drive.google.com/thumbnail?id=1TRt7bVllFICsW3y2K5Suw-iT_7lA1nAh&sz=s1200" },
     { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1N_bWhtA1dLIeFFIz6ZVUx1wR9Xk7_x0E&sz=s1200" },
-    { "title": "Maibaumstellen", "text": "", "img": "" }
+    { "title": "Maibaumstellen", "text": "", "img": "https://drive.google.com/thumbnail?id=10PY00Yb79kst7nmeTHxfbX-rZnaRX9C6&sz=s1200" }
   ],
 
   "2015": [
-    { "title": "Jugendball", "text": "Thema: Jungle", "img": "" },
+    { "title": "Jugendball", "text": "Thema: Jungle", "img": "https://drive.google.com/thumbnail?id=1nYqYmAuD8Oy1XXiyK_-80JzVdHtdmZAt&sz=s1200" },
     { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1N_bWhtA1dLIeFFIz6ZVUx1wR9Xk7_x0E&sz=s1200" },
     { "title": "Umbau", "text": "", "img": "https://drive.google.com/thumbnail?id=1TRt7bVllFICsW3y2K5Suw-iT_7lA1nAh&sz=s1200" },
     { "title": "Christbaum", "text": "", "img": "" },
@@ -106,9 +107,9 @@ const eventDatabase = {
 
   "2018": [
     { "title": "Jugendball", "text": "Thema: Wonderland", "img": "https://drive.google.com/thumbnail?id=1dUj9Fyu6XA3RmOsRM7Xe8N1qt3ckrBs4&sz=s1200" },
-    { "title": "Maibaumstellen", "text": "", "img": "" },
+    { "title": "Maibaumstellen", "text": "", "img": "https://drive.google.com/thumbnail?id=10PY00Yb79kst7nmeTHxfbX-rZnaRX9C6&sz=s1200" },
     { "title": "Snowattack", "text": "", "img": "https://drive.google.com/thumbnail?id=1iUj-CiltuW2XwYPKD1KCN3XOv6zVcthT&sz=s1200" },
-    { "title": "Beachvolleyballturnier", "text": "", "img": "" },
+    { "title": "Beachvolleyballturnier", "text": "", "img": "https://drive.google.com/thumbnail?id=1ZHVYQWW3yEWWDadYC3CEaGKS1L2Gn2Tn&sz=s1200" },
     { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1N_bWhtA1dLIeFFIz6ZVUx1wR9Xk7_x0E&sz=s1200" }
   ],
 
@@ -127,13 +128,13 @@ const eventDatabase = {
   ],
 
   "2022": [
-    { "title": "Julifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1Z3zECtmkS5JZgff057ZKr8Nn8z-Z768r&sz=s1200" },
-    { "title": "SnowAttack", "text": "", "img": "https://drive.google.com/thumbnail?id=1k12GlhEqsKYmCbC_KY99vyMiGC2oTxlg&sz=s1200" }
+    { "title": "Julifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1k12GlhEqsKYmCbC_KY99vyMiGC2oTxlg&sz=s1200" },
+    { "title": "SnowAttack", "text": "", "img": "https://drive.google.com/thumbnail?id=1Z3zECtmkS5JZgff057ZKr8Nn8z-Z768r&sz=s1200" }
 
   ],
 
   "2023": [
-    { "title": "Jugendball", "text": "Thema: Great Gatsby", "img": "" },
+    { "title": "Jugendball", "text": "Thema: Great Gatsby", "img": "https://drive.google.com/thumbnail?id=1BsarTqHCbBRu5GSqrNEr8JzMtiUuJQ_K&sz=s1200" },
     { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1_x6TL4q0cBNlNkTUx4tmXLNQ33YqEG9s&sz=s1200" },
     { "title": "SnowAttack", "text": "", "img": "https://drive.google.com/thumbnail?id=1Z3zECtmkS5JZgff057ZKr8Nn8z-Z768r&sz=s1200" }
 
@@ -141,7 +142,8 @@ const eventDatabase = {
 
   "2024": [
     { "title": "Jugendball", "text": "Thema: Flower Power", "img": "https://drive.google.com/thumbnail?id=1lstD3-SiSNj_9uXXaHlKdGVesiHwFlvZ&sz=s1200" },
-    { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1wESYgaEyd1TtnYKYNTg7OnyDQHnDiojB&sz=s1200" }
+    { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1wESYgaEyd1TtnYKYNTg7OnyDQHnDiojB&sz=s1200" },
+    { "title": "Beachvolleyballturnier", "text": "", "img": "https://drive.google.com/thumbnail?id=15NdcUAT_WIyktCGR6PkNPYoXqKg2FBnl&sz=s1200" }
   ],
 
   "2025": [
