@@ -128,15 +128,15 @@ const eventDatabase = {
   ],
 
   "2022": [
-    { "title": "Julifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1k12GlhEqsKYmCbC_KY99vyMiGC2oTxlg&sz=s1200" },
-    { "title": "SnowAttack", "text": "", "img": "https://drive.google.com/thumbnail?id=1Z3zECtmkS5JZgff057ZKr8Nn8z-Z768r&sz=s1200" }
+    { "title": "Julifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1Z3zECtmkS5JZgff057ZKr8Nn8z-Z768r&sz=s1200" },
+    { "title": "SnowAttack", "text": "", "img": "https://drive.google.com/thumbnail?id=1_x6TL4q0cBNlNkTUx4tmXLNQ33YqEG9s&sz=s1200" }
 
   ],
 
   "2023": [
     { "title": "Jugendball", "text": "Thema: Great Gatsby", "img": "https://drive.google.com/thumbnail?id=1BsarTqHCbBRu5GSqrNEr8JzMtiUuJQ_K&sz=s1200" },
-    { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1_x6TL4q0cBNlNkTUx4tmXLNQ33YqEG9s&sz=s1200" },
-    { "title": "SnowAttack", "text": "", "img": "https://drive.google.com/thumbnail?id=1Z3zECtmkS5JZgff057ZKr8Nn8z-Z768r&sz=s1200" }
+    { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1lPwvGpTV4hMIaYl5L-8qQegFDxu_oQdY&sz=s1200" },
+    { "title": "SnowAttack", "text": "", "img": "https://drive.google.com/thumbnail?id=1_x6TL4q0cBNlNkTUx4tmXLNQ33YqEG9s&sz=s1200" }
 
   ],
 
