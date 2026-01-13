@@ -194,6 +194,13 @@ body.style-mid .bg-chrome-waves {
     background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, transparent 50%, rgba(0,0,0,0.8) 100%), repeating-linear-gradient(90deg, #0a1525, #1c2e4a 50px, #0a1525 100px);
 
 }
+body.style-mid .card img {
+    width: 100% !important;        /* gleiche Logik wie 2006 */
+    height: auto !important;       /* keine Streckung */
+    object-fit: cover !important;  /* gleicher Crop-Look */
+    display: block !important;     /* sauberer Block */
+    border: 2px solid #b3b3b3 !important; /* Mid / Chrome Rahmen */
+}
 
 /*body.style-mid .bg-chrome-waves::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: repeating-linear-gradient(transparent 0px, transparent 2px, rgba(0,0,0,0.4) 3px); pointer-events: none; opacity: 0.5; }
 
@@ -489,6 +496,14 @@ body.style-retro .card img { width: 120px; height: 120px; object-fit: cover; fle
     body.style-retro .card { flex-direction: column; text-align: center; }
     body.style-retro .card img { margin: 0 auto 10px auto; width: 100%; height: auto; }
     body.style-retro .main-nav a { display: inline-block; padding: 5px; border-bottom: 1px solid #777; border-right: none; }
+
+
+
+    body.style-retro .photo-grid { padding-bottom: 150px; }
+    body.style-2006 .photo-grid  { padding-bottom: 160px; }
+    body.style-mid .photo-grid   { padding-bottom: 170px; }
+    body.style-himmel .photo-grid   { padding-bottom: 160px; }
+    body.style-sunset .photo-grid{ padding-bottom: 140px; } /*bei safari testen*/
 }
 
 @media (max-width: 480px) {
