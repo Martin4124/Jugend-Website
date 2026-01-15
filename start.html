@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Zeitreise</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="intro.css">
+</head>
+
+<body class="intro">
+
+<div class="split old">
+    <span class="era-label label-old">DAMALS</span>
+    <div class="old-inner">
+    <img src="bannerintro.png" alt="Banner" class="box-banner">
+    
+    <div class="content">
+    <img src="Maifestbanner.png" alt="Maifest Banner">
+
+    <div class="content-bottom-row">
+        <img src="logo.gif" alt="Logo">
+        <img src="nextevents.gif" alt="Next Events">
+    </div>
+</div>
+</div>
+</div>
+
+<div class="split sunset">
+    <div class="bg-sunset-glow"></div>
+    <span class="era-label label-modern">HEUTE</span>
+    <div class="modern-inner">
+    <div class="modern-content">
+        <div style="display: flex; flex-direction: column; align-items: flex-end;">
+            <img src="Jugend Logo W light.png" alt="" id="logonew" style="width: 50%;">
+            <span class="badge">Online</span>
+        </div>
+        <p>Seit 2001</p>
+        <div class="modern-timelines">
+            <div class="timeline-item">
+                <div class="poster-preview" style="background-image: url('MF.png');"></div>
+                <div class="timeline-info" id="event-maifest">
+                    <span>MAIFEST</span>
+                    <div class="progress-track">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <small class="days-text"></small>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="poster-preview" style="background-image: url('SA.png');"></div>
+                <div class="timeline-info" id="event-snowattack">
+                    <span>SNOW ATTACK</span>
+                    <div class="progress-track">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <small class="days-text"></small>
+                </div>
+            </div>
+        </div>
+
+        <div class="modern-socials">
+                <a href="#" class="social-link" title="Instagram">
+                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="#" class="social-link" title="Facebook">
+                <svg viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                </a>
+        </div>
+    </div>
+
+    <div class="modern-coords">LOC: 47.9455° N, 16.5706° E</div>
+</div>
+
+    <div class="sunset-inner">
+        </div>
+</div>
+
+<div class="center-intro">
+    <h1>Lust auf eine<br><span>Zeitreise?</span></h1>
+    <a href="index.html" class="time-btn">JETZT STARTEN</a>
+</div>
+
+
+<script>
+function updateCountdown(elementId, targetDate) {
+    const container = document.getElementById(elementId);
+    const progressFill = container.querySelector('.progress-fill');
+    const daysText = container.querySelector('.days-text');
+    
+    const target = new Date(targetDate);
+    const now = new Date();
+    
+    // Berechnung der Differenz in Tagen
+    const diffTime = target - now;
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    
+    // Fortschrittsberechnung (Beispiel: ausgehend von 100 Tagen Vorlaufzeit)
+    const maxDays = 200; 
+    let progress = 100 - (diffDays / maxDays * 100);
+    progress = Math.min(Math.max(progress, 0), 100); // Bleibt zwischen 0 und 100
+
+    if (diffDays > 0) {
+        daysText.innerText = `System bereit in ${diffDays} Tagen`;
+        progressFill.style.width = progress + "%";
+    } else {
+        daysText.innerText = "Event läuft oder beendet";
+        progressFill.style.width = "100%";
+    }
+}
+
+// Hier die unterschiedlichen Daten setzen (Format: YYYY-MM-DD)
+updateCountdown('event-maifest', '2026-05-030');
+updateCountdown('event-snowattack', '2026-02-15');
+</script>
+
+</body>
+</html>
