@@ -13,8 +13,7 @@ const eventDatabase = {
   ],
 
   "2003": [
-    { "title": "Jugendball", "text": "Thema: Mythen und Legenden", "img": "https://drive.google.com/thumbnail?id=1sJ6glmlJ3dGLQCGP2lcVp9b7i4fiHWxe&sz=s1200" },
-    { "title": "Festl", "text": "", "img": "" }
+    { "title": "Jugendball", "text": "Thema: Mythen und Legenden", "img": "https://drive.google.com/thumbnail?id=1sJ6glmlJ3dGLQCGP2lcVp9b7i4fiHWxe&sz=s1200" }
   ],
 
   "2004": [
@@ -31,8 +30,7 @@ const eventDatabase = {
 
   "2006": [
     { "title": "Jugendball", "text": "Thema: Liebe", "img": "https://drive.google.com/thumbnail?id=1WkVznUpXz52cMpJS9lzM9yZ3poWW-m_H&sz=s1200" },
-    { "title": "Maifest", "text": "", "img": "" },
-    { "title": "Festl", "text": "", "img": "" }
+    { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1N_bWhtA1dLIeFFIz6ZVUx1wR9Xk7_x0E&sz=s1200" },
   ],
 
   "2007": [
@@ -45,18 +43,15 @@ const eventDatabase = {
   ],
 
   "2009": [
-    { "title": "Jugendball", "text": "Thema: Movies", "img": "" },
-    { "title": "Festl", "text": "", "img": "" }
+    { "title": "Jugendball", "text": "Thema: Movies", "img": "" }
   ],
 
   "2010": [
-    { "title": "Jugendball", "text": "Thema: Music", "img": "https://drive.google.com/thumbnail?id=1eWXOEuYzRGLhEFPztkqPibEGEkHrIlXK&sz=s1200" },
-    { "title": "Festl", "text": "", "img": "" }
+    { "title": "Jugendball", "text": "Thema: Music", "img": "https://drive.google.com/thumbnail?id=1eWXOEuYzRGLhEFPztkqPibEGEkHrIlXK&sz=s1200" }
   ],
 
   "2011": [
-    { "title": "Jugendball", "text": "Thema: Casino Royale & 10 Jahre Jugend", "img": "https://drive.google.com/thumbnail?id=1A-ErhdjB2LP8vHRbdQbL2InFUTtXQOve&sz=s1200" },
-    { "title": "Festl", "text": "", "img": "" }
+    { "title": "Jugendball", "text": "Thema: Casino Royale & 10 Jahre Jugend", "img": "https://drive.google.com/thumbnail?id=1A-ErhdjB2LP8vHRbdQbL2InFUTtXQOve&sz=s1200" }
   ],
 
   "2012": [
@@ -74,7 +69,7 @@ const eventDatabase = {
   ],
 
   "2014": [
-    { "title": "Jugendball", "text": "Thema: Rock'n Blues", "img": "" },
+    { "title": "Jugendball", "text": "Thema: Rock'n Blues", "img": "https://drive.google.com/thumbnail?id=1VdbIhIfWFZCV7j4OoPv-vIBTmtdKz3XJ&sz=s1200" },
     { "title": "Umbau", "text": "", "img": "https://drive.google.com/thumbnail?id=1TRt7bVllFICsW3y2K5Suw-iT_7lA1nAh&sz=s1200" },
     { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1N_bWhtA1dLIeFFIz6ZVUx1wR9Xk7_x0E&sz=s1200" },
     { "title": "Maibaumstellen", "text": "", "img": "https://drive.google.com/thumbnail?id=10PY00Yb79kst7nmeTHxfbX-rZnaRX9C6&sz=s1200" }
@@ -89,7 +84,7 @@ const eventDatabase = {
   ],
 
   "2016": [
-    { "title": "Jugendball", "text": "Thema: Frozen", "img": "" },
+    { "title": "Jugendball", "text": "Thema: Frozen", "img": "https://drive.google.com/thumbnail?id=1Fs9T_2ThdDZAYVaAZpOLEAGsso5fR4TC&sz=s1200]" },
     { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1N_bWhtA1dLIeFFIz6ZVUx1wR9Xk7_x0E&sz=s1200" },
     { "title": "Umbau", "text": "", "img": "https://drive.google.com/thumbnail?id=1TRt7bVllFICsW3y2K5Suw-iT_7lA1nAh&sz=s1200" },
     { "title": "Nikolo", "text": "", "img": "https://drive.google.com/thumbnail?id=1dBhrVAqvAPjTruloPHpOV-OWff2GJnAt&sz=s1200" },
@@ -120,7 +115,6 @@ const eventDatabase = {
 
   "2020": [
     { "title": "Jugendball", "text": "Thema: Griechischer Olymp", "img": "https://drive.google.com/thumbnail?id=1IO0l6frUgneyigFgxUhd0yppis-MDLnI&sz=s1200" },
-    { "title": "Festl", "text": "", "img": "" }
   ],
 
   "2021": [
