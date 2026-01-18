@@ -38,8 +38,7 @@ const eventDatabase = {
   ],
 
   "2008": [
-    { "title": "Jugendball", "text": "Thema: Sweet Dreams", "img": "https://drive.google.com/thumbnail?id=1pmYWQYLxGPhgwqJan58BFPbvPghU_eIM&sz=s1200" },
-    { "title": "Festl", "text": "", "img": "https://drive.google.com/thumbnail?id=123Tcbg1cFzuUTkNvawDYpy2LiyEcGrXe&sz=s1200" }
+    { "title": "Jugendball", "text": "Thema: Sweet Dreams", "img": "https://drive.google.com/thumbnail?id=1pmYWQYLxGPhgwqJan58BFPbvPghU_eIM&sz=s1200" }
   ],
 
   "2009": [

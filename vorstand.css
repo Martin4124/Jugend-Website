@@ -1,0 +1,212 @@
+/* === VORSTAND PAGE STYLES === */
+
+.bg-sunset-glow {
+    position: fixed; /* Bleibt beim Scrollen an Ort und Stelle */
+    bottom: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;  /* Etwas breiter für die ganze Seite */
+    height: 80vw;
+    max-width: 1000px;
+    max-height: 1000px;
+    background: radial-gradient(circle, rgba(255, 72, 0, 0.3) 0%, transparent 70%);
+    filter: blur(80px);
+    z-index: -1; /* Hinter dem Content */
+    pointer-events: none;
+}
+
+/* Optional: Ein zweiter, kleinerer Glow oben links für mehr Dynamik */
+.vorstand-page::before {
+    content: "";
+    position: fixed;
+    top: -10%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 174, 0, 0.1) 0%, transparent 70%);
+    filter: blur(60px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+.vorstand-page {
+    background-color: #1a0500; /* Dunkler Hintergrund wie die Sunset-Side */
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#header-logo {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.page-header h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(255, 72, 0, 0.5);
+}
+
+.timeline-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.year-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid #ff4800;
+    padding: 30px;
+    border-radius: 0 15px 15px 0;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.year-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(10px);
+}
+
+.year-badge {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    background: #ff4800;
+    color: white;
+    padding: 5px 20px;
+    font-family: 'Anton';
+    font-size: 1.4rem;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.board-members {
+    margin-top: 10px;
+}
+
+.member-row {
+    margin-bottom: 8px;
+    display: flex;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding-bottom: 4px;
+}
+
+.role {
+    font-weight: 800;
+    color: #ffae00;
+    width: 160px;
+    flex-shrink: 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.name {
+    font-weight: 400;
+}
+
+.beisitzer {
+    flex-direction: column;
+    border: none;
+    margin-top: 10px;
+}
+
+.beisitzer p {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
+.footer-nav {
+    text-align: center;
+    margin-top: 60px;
+    padding-bottom: 40px;
+}
+
+.time-btn {
+    /* WICHTIG: Erlaubt erst die vertikale Bewegung */
+    display: inline-block; 
+    
+    margin-top: 30px;
+    padding: 15px 40px;
+    font-family: 'Anton';
+    font-size: 1.5rem;
+    color: #000;
+    background: #ff4800;
+    text-decoration: none;
+    border: 4px solid #fff;
+    box-shadow: 8px 8px 0 #000;
+    
+    /* Basis-Transformation */
+    transform: skewX(-10deg) translateY(0); 
+    
+    /* Transition auf 'all' oder 'transform' stellen */
+    transition: all 0.3s ease-out; 
+    
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.time-btn:hover {
+    background: #ffae00;
+    
+    /* Wichtig: skewX muss hier wiederholt werden, sonst wird er beim Hover gerade! */
+    transform: skewX(-10deg) translateY(-8px);
+    
+    /* Schatten anpassen für den "Schwebe-Effekt" */
+    box-shadow: 12px 12px 20px rgba(0,0,0,0.4), 0 0 30px #ff4800;
+}
+
+.board-members .member-row:first-child {
+    background: rgba(255, 72, 0, 0.15); /* Dezentes orangefarbenes Leuchten */
+    border-left: 3px solid #ffae00;     /* Extra Gold-Kante links */
+    padding: 10px;                      /* Etwas mehr Platz */
+    margin-left: -10px;                 /* Ausgleich für das Padding */
+    margin-right: -10px;
+    border-radius: 4px;
+    margin-bottom: 15px;                /* Mehr Abstand zum Rest des Vorstands */
+}
+
+/* Den Text des Obmanns noch markanter machen */
+.board-members .member-row:first-child .role {
+    color: #fff;                        /* Weißer Text auf dem Highlight */
+    background: #ff4800;                /* Kompakter Badge-Look für das Wort 'Obmann' */
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    width: auto;                        /* Breite passt sich dem Wort an */
+    margin-right: 15px;
+}
+
+.board-members .member-row:first-child .name {
+    font-size: 1.2rem;                  /* Name etwas größer */
+    font-weight: 800;                   /* Name dicker */
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 174, 0, 0.4);
+}
+
+/* Mobile Optimierung */
+@media (max-width: 600px) {
+    .member-row {
+        flex-direction: column;
+    }
+    .role {
+        width: 100%;
+        margin-bottom: 2px;
+    }
+    .year-card {
+        padding: 40px 20px 20px 20px;
+    }
+}
