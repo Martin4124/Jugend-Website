@@ -218,3 +218,34 @@
         padding: 40px 20px 20px 20px;
     }
 }
+/* --- MEDIA QUERIES FÜR MOBILE GERÄTE --- */
+@media (max-width: 768px) {
+    .main-nav {
+        gap: 10px; /* Weniger Abstand zwischen den Buttons */
+        padding: 0 10px 5% 10px;
+    }
+
+    .main-nav a {
+        font-size: 1rem; /* Etwas kleinere Schrift */
+        padding: 10px 18px; /* Kompakteres Padding */
+        transform: skewX(-5deg); /* Weniger Schräge, damit mehr Buttons nebeneinander passen */
+        flex: 1 1 40%; /* Buttons wachsen und füllen die Breite (2 pro Zeile) */
+        text-align: center;
+    }
+    
+    .main-nav a:hover {
+        transform: skewX(-5deg) translateY(-3px);
+    }
+}
+
+@media (max-width: 480px) {
+    .main-nav a {
+        flex: 1 1 100%; /* Auf sehr kleinen Handys: 1 Button pro Zeile */
+        font-size: 1.1rem;
+        transform: skewX(0deg); /* Keine Schräge mehr auf kleinstem Raum für bessere Lesbarkeit */
+    }
+    
+    .main-nav a:hover {
+        transform: translateY(-3px);
+    }
+}
