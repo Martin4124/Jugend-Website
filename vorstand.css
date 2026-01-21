@@ -238,14 +238,35 @@
     }
 }
 
+/* AB 480px: 2x2 RASTER MIT SKEW */
 @media (max-width: 480px) {
-    .main-nav a {
-        flex: 1 1 100%; /* Auf sehr kleinen Handys: 1 Button pro Zeile */
-        font-size: 1.1rem;
-        transform: skewX(0deg); /* Keine Schräge mehr auf kleinstem Raum für bessere Lesbarkeit */
+    .main-nav {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr; /* 2 Spalten */
+        gap: 15px 10px;                 /* Mehr vertikaler Abstand für den Skew */
+        padding: 10px 20px;             /* Mehr Seiten-Padding, damit Skew nicht rausragt */
     }
-    
+
+    .main-nav a {
+        transform: skewX(-10deg);       /* Dein cooler Sunset-Skew bleibt! */
+        font-size: 0.85rem;             /* Etwas kleiner für 2 Spalten */
+        padding: 12px 5px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Text im Button wieder gerade biegen */
+    .main-nav a span {
+        display: block;
+        transform: skewX(10deg); 
+    }
+
     .main-nav a:hover {
-        transform: translateY(-3px);
+        transform: skewX(-10deg) translateY(-3px);
+        box-shadow: 0 0 15px #ff4800;
     }
 }
