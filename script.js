@@ -29,12 +29,10 @@ const eventDatabase = {
   ],
 
   "2006": [
-    { "title": "Jugendball", "text": "Thema: Liebe", "img": "https://drive.google.com/thumbnail?id=1WkVznUpXz52cMpJS9lzM9yZ3poWW-m_H&sz=s1200" },
-    { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1N_bWhtA1dLIeFFIz6ZVUx1wR9Xk7_x0E&sz=s1200" },
+    { "title": "Jugendball", "text": "Thema: Liebe", "img": "https://drive.google.com/thumbnail?id=1WkVznUpXz52cMpJS9lzM9yZ3poWW-m_H&sz=s1200" }
   ],
 
   "2007": [
-    { "title": "Festl", "text": "", "img": "" }
   ],
 
   "2008": [
@@ -95,7 +93,7 @@ const eventDatabase = {
     { "title": "Diverses", "text": "", "img": "" },
     { "title": "Trefferoeffnung", "text": "", "img": "" },
     { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1N_bWhtA1dLIeFFIz6ZVUx1wR9Xk7_x0E&sz=s1200" },
-    { "title": "Maibaum", "text": "", "img": "" },
+    { "title": "Maibaum", "text": "", "img": "https://drive.google.com/thumbnail?id=10PY00Yb79kst7nmeTHxfbX-rZnaRX9C6&sz=s1200" },
     { "title": "Snowattack", "text": "", "img": "https://drive.google.com/thumbnail?id=1xwyvvcZYwv98-7ADH0sBsE1fIzOVv4Cs&sz=s1200" }
   ],
 
@@ -109,11 +107,16 @@ const eventDatabase = {
 
   "2019": [
     { "title": "Jugendball", "text": "Thema: Fire & Ice", "img": "https://drive.google.com/thumbnail?id=1bYhlLT9Rc0lpMZSVS2pqlmyAGJjCi10u&sz=s1200" },
-    { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1N_bWhtA1dLIeFFIz6ZVUx1wR9Xk7_x0E&sz=s1200" }
+    { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1N_bWhtA1dLIeFFIz6ZVUx1wR9Xk7_x0E&sz=s1200" },
+    { "title": "Maibaumstellen", "text": "", "img": "https://drive.google.com/thumbnail?id=10PY00Yb79kst7nmeTHxfbX-rZnaRX9C6&sz=s1200" },
+    { "title": "Snowattack", "text": "", "img": "" },
+    { "title": "Divers", "text": "", "img": "" },
+
   ],
 
   "2020": [
     { "title": "Jugendball", "text": "Thema: Griechischer Olymp", "img": "https://drive.google.com/thumbnail?id=1IO0l6frUgneyigFgxUhd0yppis-MDLnI&sz=s1200" },
+    { "title": "Nikolo", "text": "", "img": "https://drive.google.com/thumbnail?id=1wsdggk4xiEmNuN2MWLI8_V1w21KriJtY&sz=s1200" },
   ],
 
   "2021": [
@@ -122,26 +125,34 @@ const eventDatabase = {
 
   "2022": [
     { "title": "Julifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1Z3zECtmkS5JZgff057ZKr8Nn8z-Z768r&sz=s1200" },
-    { "title": "SnowAttack", "text": "", "img": "https://drive.google.com/thumbnail?id=1_x6TL4q0cBNlNkTUx4tmXLNQ33YqEG9s&sz=s1200" }
+    { "title": "SnowAttack", "text": "", "img": "https://drive.google.com/thumbnail?id=1_x6TL4q0cBNlNkTUx4tmXLNQ33YqEG9s&sz=s1200" },
+    { "title": "Divers", "text": "", "img": "" },
+    { "title": "Maibaumstellen", "text": "", "img": "https://drive.google.com/thumbnail?id=10PY00Yb79kst7nmeTHxfbX-rZnaRX9C6&sz=s1200" }
 
   ],
 
   "2023": [
     { "title": "Jugendball", "text": "Thema: Great Gatsby", "img": "https://drive.google.com/thumbnail?id=1BsarTqHCbBRu5GSqrNEr8JzMtiUuJQ_K&sz=s1200" },
     { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1lPwvGpTV4hMIaYl5L-8qQegFDxu_oQdY&sz=s1200" },
-    { "title": "SnowAttack", "text": "", "img": "https://drive.google.com/thumbnail?id=1_x6TL4q0cBNlNkTUx4tmXLNQ33YqEG9s&sz=s1200" }
+    { "title": "SnowAttack", "text": "", "img": "https://drive.google.com/thumbnail?id=1_x6TL4q0cBNlNkTUx4tmXLNQ33YqEG9s&sz=s1200" },
+    { "title": "Maibaumstellen", "text": "", "img": "https://drive.google.com/thumbnail?id=10PY00Yb79kst7nmeTHxfbX-rZnaRX9C6&sz=s1200" }
+
 
   ],
 
   "2024": [
     { "title": "Jugendball", "text": "Thema: Flower Power", "img": "https://drive.google.com/thumbnail?id=1lstD3-SiSNj_9uXXaHlKdGVesiHwFlvZ&sz=s1200" },
     { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1wESYgaEyd1TtnYKYNTg7OnyDQHnDiojB&sz=s1200" },
-    { "title": "Beachvolleyballturnier", "text": "", "img": "https://drive.google.com/thumbnail?id=15NdcUAT_WIyktCGR6PkNPYoXqKg2FBnl&sz=s1200" }
+    { "title": "Volleyballturnier", "text": "", "img": "https://drive.google.com/thumbnail?id=15NdcUAT_WIyktCGR6PkNPYoXqKg2FBnl&sz=s1200" },
+    { "title": "Sonnwendfeier", "text": "", "img": "https://drive.google.com/thumbnail?id=1ZIIn-Tk3Mxhe2N6iBMGDprNUhsbxId1M&sz=s1200" }
   ],
 
   "2025": [
     { "title": "Jugendball", "text": "Thema: Mamma Mia", "img": "https://drive.google.com/thumbnail?id=13BDWwxIdgUinkyUqTSVPiMir8V2VqntK&sz=s1200" },
-    { "title": "Festl", "text": "", "img": "" }
+    { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1wESYgaEyd1TtnYKYNTg7OnyDQHnDiojB&sz=s1200" },
+    { "title": "Volleyballturnier", "text": "", "img": "https://drive.google.com/thumbnail?id=15NdcUAT_WIyktCGR6PkNPYoXqKg2FBnl&sz=s1200" },
+    { "title": "Sonnwendfeier", "text": "", "img": "https://drive.google.com/thumbnail?id=1ZIIn-Tk3Mxhe2N6iBMGDprNUhsbxId1M&sz=s1200" },
+    { "title": "SnowAttack", "text": "", "img": "https://drive.google.com/thumbnail?id=1_x6TL4q0cBNlNkTUx4tmXLNQ33YqEG9s&sz=s1200" },
   ]
 
 
@@ -196,53 +207,19 @@ function updateTimeline(year) {
     eraTitle.innerText = titleText;
     renderContent(year);
 }
-function renderContent(year) {
-    let html = '';
-    
-    // Prüfen, ob wir Daten für das Jahr haben
-    if (eventDatabase[year]) {
-        eventDatabase[year].forEach(event => {
-            // Platzhalter Bild, falls keines angegeben ist
-            const imgSrc = event.img ? event.img : `https://picsum.photos/400/300?random=${Math.random()}`;
-
-            
-            html += `
-                <article class="card">
-                    <a href="${galleryUrl}">
-                        <img src="${imgSrc}" alt="${event.title}">
-                        <div class="card-txt">
-                            <h3>${event.title}</h3>
-                            <p>${event.text}</p>
-                        </div>
-                    </a>
-                </article>
-            `;
-        });
-    } else {
-        // Leere Meldung, wenn keine Daten da sind
-        html = `
-            <div style="width: 100%; text-align: center; padding: 40px; opacity: 0.6;">
-                <p>Keine Einträge für das Jahr ${year} gefunden.</p>
-            </div>
-        `;
-    }
-
-    gallery.innerHTML = html;
-}
 
 async function renderContent(year) {
     let html = '';
     
+    // 1. Prüfen, ob Daten für das Jahr in der eventDatabase existieren
     if (eventDatabase[year]) {
         for (const event of eventDatabase[year]) {
-            const imgSrc = event.img;
-
+            
+            // 2. URL-Logik (unverändert)
             const festSafe = event.title.toLowerCase().replace(/[^a-z0-9]/g, '');
-            // Muss die Jahr logik noch einfügen
             let galleryUrl = '';
-            const currentYear = parseInt(year); // In Zahl umwandeln
+            const currentYear = parseInt(year);
 
-            // 2. Korrekte Bereichsabfrage mit && (UND)
             if (currentYear >= 2001 && currentYear <= 2005) {
                 galleryUrl = `2001gallery.html?year=${year}&fest=${festSafe}`;
             } else if (currentYear >= 2006 && currentYear <= 2010) {
@@ -251,32 +228,36 @@ async function renderContent(year) {
                 galleryUrl = `2011gallery.html?year=${year}&fest=${festSafe}`;
             } else if (currentYear >= 2015 && currentYear <= 2020) {
                 galleryUrl = `2015gallery.html?year=${year}&fest=${festSafe}`;
-            } else if (currentYear >= 2021 && currentYear <= 2025) {
-                galleryUrl = `2021gallery.html?year=${year}&fest=${festSafe}`;
             } else {
-                galleryUrl = `2001gallery.html?year=${year}&fest=${festSafe}`;
+                galleryUrl = `2021gallery.html?year=${year}&fest=${festSafe}`;
             }
             
-            // Prüfen ob ein Link da ist, falls ja -> HTML für Button erstellen
-            const linkHtml =  `<a href="${galleryUrl}" class="card-link" target="_blank">MEHR INFOS</a>`;
-            
+            // 3. Bild-Logik: Nur ein <img>-Tag erstellen, wenn event.img existiert und nicht leer ist
+            let imgHtml = '';
+            if (event.img && event.img.trim() !== "") {
+                imgHtml = `<img src="${event.img}" alt="${event.title}">`;
+            }
+
+            // 4. HTML zusammenbauen
             html += `
                 <article class="card">
-                <a href="${galleryUrl}" style="text-decoration: none; color: inherit;">
-                    <img src="${imgSrc}" alt="${event.title}">
-                    <div class="card-txt">
-                        <h3>${event.title}</h3>
-                        <p>${event.text}</p>
-                        ${linkHtml} 
-                    </div>
-                </a>
+                    <a href="${galleryUrl}" style="text-decoration: none; color: inherit;">
+                        ${imgHtml}
+                        <div class="card-txt">
+                            <h3>${event.title}</h3>
+                            <p>${event.text || ""}</p>
+                            <span class="card-link">MEHR INFOS</span>
+                        </div>
+                    </a>
                 </article>
             `;
-        };
+        }
     } else {
         html = `<div style="width: 100%; text-align: center; padding: 40px; opacity: 0.6;">
                     <p>Keine Einträge für das Jahr ${year} gefunden.</p>
                 </div>`;
     }
+    
+    // 5. In den Container schreiben
     gallery.innerHTML = html;
 }
