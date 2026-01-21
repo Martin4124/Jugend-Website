@@ -85,68 +85,46 @@ body.style-sunset {
     transform: skewX(-10deg) translateY(-5px);
 }
 
-/* 3. DAS GRID (Deine Logik aus der Red-Gallery) */
+/* 3. DAS GRID (Optimiert für echtes Justified Layout) */
 .photo-grid {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
     padding: 20px;
-    justify-content: center;
+    /* Entferne justify-content: center, damit die Zeilen bündig füllen */
 }
 
 .justified-item, .card {
-    flex: 1 1 auto !important; /* Erlaubt proportionales Wachstum */
-    height: 300px !important;    /* Feste Zeilenhöhe */
-    width: auto !important;      /* Hebt feste Breiten aus der style.css auf */
-    max-width: 100%;
-    position: relative;
+    height: 300px;
+    flex: 1 1 auto; 
+    position: relative; /* Wichtig für die absolute Positionierung des Bildes */
     overflow: hidden;
-    background-color: #000;
+    background-color: #1a0500; /* Dunkles Sunset-Braun statt hartem Schwarz */
     border: 1px solid #333;
-    transform: skewX(-2deg);     /* Sunset Schräglage */
+    transform: skewX(-2deg);
     transition: 0.3s ease;
 }
 
 .justified-item img, .card img {
-    height: 100% !important;
-    width: auto !important;      /* Bild bestimmt die Breite des Rahmens */
-    min-width: 100%;
-    object-fit: cover;           /* Verhindert Verzerrung */
+    /* Absolute Positionierung erzwingt, dass das Bild den Rahmen sprengt */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) skewX(2deg) scale(1.2);
+    
+    min-width: 105%; /* Mehr Puffer für die Schräglage */
+    min-height: 105%;
+    width: auto;
+    height: auto;
+    
+    object-fit: cover;
     display: block;
-    filter: grayscale(100%);     /* Startet Schwarz-Weiß */
     transition: 0.5s ease;
 }
 
-/* Hover-Effekte (Sunset Style) */
-.justified-item:hover, .card:hover {
-    transform: skewX(-2deg) translateY(-5px);
-    border-color: var(--acc-primary);
-    box-shadow: 0 10px 30px rgba(255,72,0,0.3);
-    z-index: 10;
-}
-
+/* Hover-Korrektur */
 .justified-item:hover img, .card:hover img {
-    filter: grayscale(0%);       /* Wird farbig beim Hover */
-    transform: scale(1.05);
-}
-
-/* Text-Overlay (Anton Font) */
-.card-txt {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(to top, #000, transparent);
-    padding: 20px;
-    transform: skewX(2deg);      /* Text-Reset */
-}
-
-.card-txt h3 {
-    font-family: 'Anton', sans-serif;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    color: #fff;
-    margin: 0;
+    transform: translate(-50%, -50%) skewX(2deg) scale(1.35);
 }
 
 /* 4. Letzte Reihe Fix (Deine Logik) */

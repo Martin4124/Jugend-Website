@@ -1,28 +1,29 @@
 /* ============================================================
-   RED GALLERY - TRUE GOOGLE PHOTOS LOOK (No Fixed Boxes)
+   RED GALLERY - BLUE THEME ARRANGEMENT LOGIC (FINAL FIX)
    ============================================================ */
 
 :root {
     --juv-red: #4a0000;
-    --juv-red-hover: #7a0000;
 }
 
-/* 1. Der Container: Muss Flexbox sein */
-.red-flex-grid, .photo-grid {
+/* 1. Der Container (red-flex-grid aus deiner HTML) */
+.red-flex-grid {
     display: flex !important;
     flex-wrap: wrap !important;
-    gap: 10px;
+    gap: 10px !important;
     padding: 20px;
     background-color: #000;
-    justify-content: center;
+    justify-content: flex-start !important; /* Wichtig für das Blue-Theme Feeling */
 }
 
-/* 2. Die Card: Breite DARF NICHT fest sein (320px muss weg!) */
-.red-flex-grid .card, .justified-item {
-    flex: 1 1 auto !important; /* Erlaubt proportionales Wachstum */
-    height: 300px !important;    /* Alle Bilder in einer Zeile sind gleich hoch */
-    width: auto !important;      /* WICHTIG: Hebt die 320px aus style.css auf! */
-    max-width: 100%;
+/* 2. Die Artikel/Karten (Egal welche Klasse sie im JS haben) */
+.red-flex-grid article, 
+.red-flex-grid .card, 
+.red-flex-grid .justified-item {
+    flex: 1 1 auto !important; /* Dies ist der "Blue Theme" Motor */
+    height: 300px !important;    /* Zeilenhöhe wie bei Projekt Blau */
+    width: auto !important;      /* Verhindert feste Breiten aus der style.css */
+    
     position: relative;
     overflow: hidden;
     background-color: #1a1a1a;
@@ -30,26 +31,92 @@
     margin: 0 !important;
 }
 
-/* 3. Das Bild: Bestimmt durch sein Format die Breite des Rahmens */
-.red-flex-grid .card img, .justified-item img {
+/* 3. Das Bild innerhalb der Karte */
+.red-flex-grid img {
     height: 100% !important;
-    width: auto !important;      /* Bild behält sein Seitenverhältnis */
-    min-width: 100%;             /* Füllt den Rahmen aber mindestens aus */
-    object-fit: cover;           /* Verhindert Verzerrung */
+    width: 100% !important;
+    object-fit: cover !important; /* Lückenlose Füllung erzwingen */
     display: block;
+    transition: transform 0.3s ease;
 }
 
-/* 4. Letzte Reihe Fix: Verhindert, dass 1-2 Bilder die ganze Zeile sprengen */
-.red-flex-grid::after, .photo-grid::after {
-    content: '';
+/* 4. Letzte Reihe Fix (Essential!) */
+.red-flex-grid::after {
+    content: '' !important;
     flex-grow: 999 !important;
 }
 
-/* --- OPTIK (2006 Style) --- */
+/* --- RED OPTIK --- */
 
-.red-flex-grid .card:hover {
-    border-color: var(--juv-red-hover);
+.red-flex-grid article:hover {
+    border-color: #ff0000;
     z-index: 10;
+}
+
+.card-txt {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(74, 0, 0, 0.9);
+    padding: 8px;
+    transform: translateY(101%);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.red-flex-grid article:hover .card-txt {
+    transform: translateY(0);
+}
+
+/* ============================================================
+   RED GALLERY - FORCE BLUE ARRANGEMENT
+   ============================================================ */
+
+/* 1. Den Container zwingen, sich wie im Blue Theme zu verhalten */
+body.red-photo-page .red-flex-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    justify-content: flex-start !important; /* Blue Theme Style */
+    padding: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* 2. Die Artikel (Cards) - Hier liegt der Fehler meistens */
+body.red-photo-page .red-flex-grid article.card,
+body.red-photo-page .red-flex-grid .justified-item {
+    /* Blue Theme Logik */
+    flex: 1 1 auto !important; 
+    height: 300px !important;    /* Zeilenhöhe festlegen */
+    width: auto !important;      /* WICHTIG: Überschreibt feste Breiten (z.B. 320px) */
+    
+    /* Red Theme Optik */
+    position: relative !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    border: 1px solid #333 !important;
+    background: #1a1a1a !important;
+}
+
+/* 3. Das Bild muss den flexiblen Platz füllen */
+body.red-photo-page .red-flex-grid article img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important; /* Kein Verzerren, volle Füllung */
+    display: block !important;
+    min-width: 100% !important;
+}
+
+/* 4. Der "Last Row" Fix vom Blue Theme */
+body.red-photo-page .red-flex-grid::after {
+    content: '' !important;
+    flex-grow: 999 !important;
+}
+
+/* --- HOVER EFFEKT --- */
+body.red-photo-page .red-flex-grid article:hover {
+    border-color: #ff0000 !important;
 }
 
 .card-txt {
@@ -60,23 +127,8 @@
     padding: 8px;
     transform: translateY(100%);
     transition: transform 0.3s ease;
-    text-align: center;
 }
 
-.card:hover .card-txt {
+body.red-photo-page .red-flex-grid article:hover .card-txt {
     transform: translateY(0);
-}
-
-.card-txt h3 {
-    color: #fff;
-    font-size: 11px;
-    font-family: Arial, sans-serif;
-    text-transform: uppercase;
-}
-
-/* 5. Mobile Anpassung */
-@media (max-width: 768px) {
-    .red-flex-grid .card, .justified-item {
-        height: 200px !important; /* Kleinere Reihen auf dem Handy */
-    }
 }
