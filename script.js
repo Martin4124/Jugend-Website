@@ -54,8 +54,7 @@ const eventDatabase = {
   "2012": [
     { "title": "Jugendball", "text": "Thema: Under the Sea", "img": "https://drive.google.com/thumbnail?id=1Ag_ybY3aRQJ-ZjL51WTpeuqSWc-qg6UB&sz=s1200" },
     { "title": "Umbau", "text": "", "img": "https://drive.google.com/thumbnail?id=1TRt7bVllFICsW3y2K5Suw-iT_7lA1nAh&sz=s1200" },
-    { "title": "Silvesterwanderung", "text": "", "img": "" },
-    { "title": "Gemeinnützigkeit", "text": "", "img": "" }
+    { "title": "Divers", "text": "", "img": "" }
   ],
 
   "2013": [
@@ -84,8 +83,7 @@ const eventDatabase = {
     { "title": "Jugendball", "text": "Thema: Frozen", "img": "https://drive.google.com/thumbnail?id=1Fs9T_2ThdDZAYVaAZpOLEAGsso5fR4TC&sz=s1200]" },
     { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1N_bWhtA1dLIeFFIz6ZVUx1wR9Xk7_x0E&sz=s1200" },
     { "title": "Umbau", "text": "", "img": "https://drive.google.com/thumbnail?id=1TRt7bVllFICsW3y2K5Suw-iT_7lA1nAh&sz=s1200" },
-    { "title": "Nikolo", "text": "", "img": "https://drive.google.com/thumbnail?id=1dBhrVAqvAPjTruloPHpOV-OWff2GJnAt&sz=s1200" },
-    { "title": "Diverses", "text": "", "img": "" }
+    { "title": "Nikolo", "text": "", "img": "https://drive.google.com/thumbnail?id=1dBhrVAqvAPjTruloPHpOV-OWff2GJnAt&sz=s1200" }
   ],
 
   "2017": [
