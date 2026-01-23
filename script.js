@@ -25,7 +25,7 @@ const eventDatabase = {
   "2005": [
     { "title": "Jugendball", "text": "Thema: Märchen", "img": "https://drive.google.com/thumbnail?id=13QKJWJrlvYA1p5e6Qr10gagC_RqRFOGd&sz=s1200" },
     { "title": "Schneebar", "text": "", "img": "https://drive.google.com/thumbnail?id=1DngwUVnAiK4rwJKEEQ02fAFva3TLrWq3&sz=s1200" },
-    { "title": "Seifenkistenrennen", "text": "", "img": "" }
+    { "title": "Seifenkistenrennen", "text": "", "img": "https://drive.google.com/thumbnail?id=1gRz3BQ0Jlk2XGJW1S_94e1l-H17vIDyg&sz=s1200" }
   ],
 
   "2006": [
