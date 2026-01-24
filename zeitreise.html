@@ -13,7 +13,11 @@
 </head>
 <body class="style-sunset"> <div class="bg-sunset-glow"></div> <div class="bg-neon-beams"></div>  <div class="bg-chrome-waves"></div> <div id="cockpit">
         <label>ZEITREISE MODUL</label>
-        <div class="display-wrapper"><span id="year-display">2025</span></div>
+        <div class="display-wrapper">
+            <button class="nav-arrow" onclick="changeYear(-1)">&#10094;</button>
+            <span id="year-display">2025</span>
+            <button class="nav-arrow" onclick="changeYear(1)">&#10095;</button>
+        </div>
         <input type="range" id="time-slider" min="2001" max="2025" value="2025" step="1" oninput="updateTimeline(this.value)">
         <div class="range-labels"><span>2001 - </span><span>HEUTE</span></div>
     </div>
@@ -32,7 +36,7 @@
             
             <nav class="main-nav">
                 <a href="index.html">Home</a>
-                <a href="#">News</a>
+                <a href="News.html">News</a>
                 <a href="Vorstand.html">Vorstand</a>
                 <a href="zeitreise.html">Zeitreise</a>
             </nav>

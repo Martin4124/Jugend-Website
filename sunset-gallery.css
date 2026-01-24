@@ -133,6 +133,17 @@ body.style-sunset {
     flex-grow: 999 !important;
 }
 
+#ComingSoon{
+    font-family: 'Anton';
+    font-size: 4rem !important;
+    color: #fff;
+    text-shadow:
+    0 0 10px #ff4800,
+    0 0 20px #ff4800,
+    0 0 30px #ff4800,
+    0 0 40px #ff4800,
+    0 0 50px #ff4800;
+}
 /* 5. Mobile Anpassung */
 @media (max-width: 768px) {
     .justified-item, .card {

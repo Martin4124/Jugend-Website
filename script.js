@@ -19,13 +19,13 @@ const eventDatabase = {
   "2004": [
     { "title": "Jugendball", "text": "Thema: Himmel & Hölle", "img": "https://drive.google.com/thumbnail?id=1Y7Z-DCt1q9tjRHBhdF2YtxkIA3YNoNdz&sz=s1200" },
     { "title": "Maifest", "text": "Das legendäre Maifest", "img": "https://drive.google.com/thumbnail?id=1pIM2xz5vOTRRP2J8b1nh_WTV-_b47uvm&sz=s1200" },
-    { "title": "Seifenkistenrennen", "text": "", "img": "" }
+    { "title": "Seifenkistenrennen", "text": "", "img": "https://drive.google.com/thumbnail?id=1gRz3BQ0Jlk2XGJW1S_94e1l-H17vIDyg&sz=s1200" }
   ],
 
   "2005": [
     { "title": "Jugendball", "text": "Thema: Märchen", "img": "https://drive.google.com/thumbnail?id=13QKJWJrlvYA1p5e6Qr10gagC_RqRFOGd&sz=s1200" },
     { "title": "Schneebar", "text": "", "img": "https://drive.google.com/thumbnail?id=1DngwUVnAiK4rwJKEEQ02fAFva3TLrWq3&sz=s1200" },
-    { "title": "Seifenkistenrennen", "text": "", "img": "https://drive.google.com/thumbnail?id=1gRz3BQ0Jlk2XGJW1S_94e1l-H17vIDyg&sz=s1200" }
+    { "title": "Seifenkistenrennen", "text": "", "img": "https://drive.google.com/thumbnail?id=19f0DL372jqqXvKIMwLee5s1E__BFC_Qt&sz=s1200" }
   ],
 
   "2006": [
@@ -40,7 +40,7 @@ const eventDatabase = {
   ],
 
   "2009": [
-    { "title": "Jugendball", "text": "Thema: Movies", "img": "" }
+    { "title": "Jugendball", "text": "Thema: Movies", "img": "https://drive.google.com/thumbnail?id=18sC5selyILQkZRv1JX5JHZo7DR86yrWx&sz=s1200" }
   ],
 
   "2010": [
@@ -54,13 +54,13 @@ const eventDatabase = {
   "2012": [
     { "title": "Jugendball", "text": "Thema: Under the Sea", "img": "https://drive.google.com/thumbnail?id=1Ag_ybY3aRQJ-ZjL51WTpeuqSWc-qg6UB&sz=s1200" },
     { "title": "Umbau", "text": "", "img": "https://drive.google.com/thumbnail?id=1TRt7bVllFICsW3y2K5Suw-iT_7lA1nAh&sz=s1200" },
-    { "title": "Divers", "text": "", "img": "" }
+    { "title": "Divers", "text": "", "img": "https://drive.google.com/thumbnail?id=1tiQV2xvDfi2LSSXvhM1FEnRswUlYNlfw&sz=s1200" }
   ],
 
   "2013": [
     { "title": "Jugendball", "text": "Thema: Wild, Wild West", "img": "https://drive.google.com/thumbnail?id=18O-JOUfnIpWsp2uOrFdhsNc0emB1g7Dt&sz=s1200" },
     { "title": "Umbau", "text": "", "img": "https://drive.google.com/thumbnail?id=1TRt7bVllFICsW3y2K5Suw-iT_7lA1nAh&sz=s1200" },
-    { "title": "Divers", "text": "", "img": "" },
+    { "title": "Divers", "text": "", "img": "https://drive.google.com/thumbnail?id=1tiQV2xvDfi2LSSXvhM1FEnRswUlYNlfw&sz=s1200" },
     {"title": "Tag der offenen Baustelle", "text": "", "img": "https://drive.google.com/thumbnail?id=11SCDea5tFrSQXvKcPmPx6MLCOP1eai5D&sz=s1200"}
   ],
 
@@ -75,8 +75,8 @@ const eventDatabase = {
     { "title": "Jugendball", "text": "Thema: Jungle", "img": "https://drive.google.com/thumbnail?id=1nYqYmAuD8Oy1XXiyK_-80JzVdHtdmZAt&sz=s1200" },
     { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1N_bWhtA1dLIeFFIz6ZVUx1wR9Xk7_x0E&sz=s1200" },
     { "title": "Umbau", "text": "", "img": "https://drive.google.com/thumbnail?id=1TRt7bVllFICsW3y2K5Suw-iT_7lA1nAh&sz=s1200" },
-    { "title": "Christbaum", "text": "", "img": "" },
-    { "title": "Diverses", "text": "", "img": "" }
+    { "title": "Christbaum", "text": "", "img": "https://drive.google.com/thumbnail?id=1bcSQdmEV-ukfaSwn9QDrploYdXkHUkE5&sz=s1200" },
+    { "title": "Diverses", "text": "", "img": "https://drive.google.com/thumbnail?id=1tiQV2xvDfi2LSSXvhM1FEnRswUlYNlfw&sz=s1200" }
   ],
 
   "2016": [
@@ -88,8 +88,8 @@ const eventDatabase = {
 
   "2017": [
     { "title": "Jugendball", "text": "Thema: Moulin Rouge", "img": "https://drive.google.com/thumbnail?id=123Tcbg1cFzuUTkNvawDYpy2LiyEcGrXe&sz=s1200" },
-    { "title": "Diverses", "text": "", "img": "" },
-    { "title": "Trefferoeffnung", "text": "", "img": "" },
+    { "title": "Diverses", "text": "", "img": "https://drive.google.com/thumbnail?id=1tiQV2xvDfi2LSSXvhM1FEnRswUlYNlfw&sz=s1200" },
+    { "title": "Trefferoeffnung", "text": "", "img": "https://drive.google.com/thumbnail?id=1f0mAWj2Cgzgw3oR4cqqMuLCfX5PH5_l9&sz=s1200" },
     { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1N_bWhtA1dLIeFFIz6ZVUx1wR9Xk7_x0E&sz=s1200" },
     { "title": "Maibaum", "text": "", "img": "https://drive.google.com/thumbnail?id=10PY00Yb79kst7nmeTHxfbX-rZnaRX9C6&sz=s1200" },
     { "title": "Snowattack", "text": "", "img": "https://drive.google.com/thumbnail?id=1xwyvvcZYwv98-7ADH0sBsE1fIzOVv4Cs&sz=s1200" }
@@ -107,8 +107,8 @@ const eventDatabase = {
     { "title": "Jugendball", "text": "Thema: Fire & Ice", "img": "https://drive.google.com/thumbnail?id=1bYhlLT9Rc0lpMZSVS2pqlmyAGJjCi10u&sz=s1200" },
     { "title": "Maifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1N_bWhtA1dLIeFFIz6ZVUx1wR9Xk7_x0E&sz=s1200" },
     { "title": "Maibaumstellen", "text": "", "img": "https://drive.google.com/thumbnail?id=10PY00Yb79kst7nmeTHxfbX-rZnaRX9C6&sz=s1200" },
-    { "title": "Snowattack", "text": "", "img": "" },
-    { "title": "Divers", "text": "", "img": "" },
+    { "title": "Snowattack", "text": "", "img": "https://drive.google.com/thumbnail?id=1_x6TL4q0cBNlNkTUx4tmXLNQ33YqEG9s&sz=s1200" },
+    { "title": "Divers", "text": "", "img": "https://drive.google.com/thumbnail?id=1tiQV2xvDfi2LSSXvhM1FEnRswUlYNlfw&sz=s1200" },
 
   ],
 
@@ -124,7 +124,7 @@ const eventDatabase = {
   "2022": [
     { "title": "Julifest", "text": "", "img": "https://drive.google.com/thumbnail?id=1Z3zECtmkS5JZgff057ZKr8Nn8z-Z768r&sz=s1200" },
     { "title": "SnowAttack", "text": "", "img": "https://drive.google.com/thumbnail?id=1_x6TL4q0cBNlNkTUx4tmXLNQ33YqEG9s&sz=s1200" },
-    { "title": "Divers", "text": "", "img": "" },
+    { "title": "Divers", "text": "", "img": "https://drive.google.com/thumbnail?id=1fNzrJZrWufkBpj3dIsGJb_PQ6UpoW0pJ&sz=s1200" },
     { "title": "Maibaumstellen", "text": "", "img": "https://drive.google.com/thumbnail?id=10PY00Yb79kst7nmeTHxfbX-rZnaRX9C6&sz=s1200" }
 
   ],
@@ -192,7 +192,7 @@ function updateTimeline(year) {
         newStyle = 'style-mid';
         titleText = '';
     } 
-    else if (year >= 2015 && year <= 2018) {
+    else if (year >= 2015 && year <= 2019) {
         newStyle = 'style-himmel';
         titleText = '';
     } 
@@ -205,6 +205,19 @@ function updateTimeline(year) {
     eraTitle.innerText = titleText;
     renderContent(year);
 }
+
+function changeYear(delta) {
+    const slider = document.getElementById('time-slider');
+    let currentYear = parseInt(slider.value);
+    let newYear = currentYear + delta;
+
+    // Grenzen prüfen (2001 bis 2025)
+    if (newYear >= 2001 && newYear <= 2025) {
+        slider.value = newYear; // Slider verschieben
+        updateTimeline(newYear); // Seite aktualisieren
+    }
+}
+
 
 async function renderContent(year) {
     let html = '';

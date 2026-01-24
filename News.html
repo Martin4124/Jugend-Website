@@ -28,21 +28,8 @@
     </header>
 
     <main class="container">
-        <h2 id="year-display">ARCHIV // <span id="event-name">LÄDT...</span></h2>
-
-        <div id="gallery-container" class="photo-grid"></div>
+        <h1 id="ComingSoon">Coming Soon</h1>
     </main>
 
-    <script src="loadimages.js"></script>
-    <script>
-        window.onload = function() {
-            const params = new URLSearchParams(window.location.search);
-            const year = params.get('year') || '2024';
-            const fest = params.get('fest') || 'EVENT';
-
-            document.getElementById('event-name').innerText = `${fest.toUpperCase()} ${year}`;
-            loadGallery(year, fest);
-        };
-    </script>
 </body>
 </html>
