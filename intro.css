@@ -474,7 +474,7 @@ body.intro {
 }
 
 /* === MOBILE === */
-@media (max-width: 768px), (hover: none) and (pointer: coarse) and (orientation: portrait) {
+@media (max-width: 980px), (hover: none) and (pointer: coarse) and (orientation: portrait) {
     html, body {
         height: 100%;
         margin: 0;
